@@ -1,0 +1,10 @@
+.NavBar {
+    background-color: #eaeaea;
+    -webkit-box-shadow: 0 2px 2px #888888;
+    -moz-box-shadow: 0 2px 2px #888888;
+    box-shadow: 0 2px 2px #888888;
+    border-bottom: #eaeaea;
+    border-bottom-style: ridge;
+    padding-left: 1em;
+    padding-right: 1em;
+}
