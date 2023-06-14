@@ -9,10 +9,15 @@
     padding-right: 1em;
 }
 
-.NavBarLogos {
+.NavBarIcons {
     margin-right: 10px;
     height: 35px;
     width: 35px;
+}
+
+.NavBarLogo {
+    height: 50px;
+    cursor: pointer;
 }
 
 .NavBarText {

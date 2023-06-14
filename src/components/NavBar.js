@@ -14,7 +14,7 @@ const NavBar = () => {
                 <img
                 src={ logo }
                 alt='logo'
-                height='50'
+                className= { styles.NavBarLogo }
                 />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -24,7 +24,7 @@ const NavBar = () => {
                         <img
                         src={ dashboard }
                         alt='Dashboard logo'
-                        className={ styles.NavBarLogos }
+                        className={ styles.NavBarIcons }
                     />
                     <span className='align-bottom'>Dashboard</span>
                     </Nav.Link>
@@ -32,7 +32,7 @@ const NavBar = () => {
                     <img
                         src={ opened }
                         alt='Dashboard logo'
-                        className={ styles.NavBarLogos }
+                        className={ styles.NavBarIcons }
                     />
                     <span className='align-bottom'>Log in</span>
                     </Nav.Link>
@@ -40,7 +40,7 @@ const NavBar = () => {
                     <img
                         src={ signup }
                         alt='Dashboard logo'
-                        className={ styles.NavBarLogos }
+                        className={ styles.NavBarIcons }
                         />
                         <span className='align-bottom'>Sign up</span>
                 </Nav.Link>
