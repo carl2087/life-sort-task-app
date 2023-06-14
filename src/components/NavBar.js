@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../assets/life-sort-logo-circle-logo.png'
 import dashboard from'../assets/dashboard.svg'
-import closed from '../assets/door-close-icon.svg'
+import signup from '../assets/sign-up.svg'
 import opened from '../assets/door-open-icon.svg'
 import styles from '../styles/NavBar.module.css'
 
@@ -38,7 +38,7 @@ const NavBar = () => {
                     </Nav.Link>
                 <Nav.Link className= {styles.NavBarText} >
                     <img
-                        src={ closed }
+                        src={ signup }
                         alt='Dashboard logo'
                         className={ styles.NavBarLogos }
                         />
