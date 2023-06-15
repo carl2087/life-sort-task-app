@@ -10,3 +10,13 @@
 .FooterLogo {
     height: 6em;
 }
+
+.FooterIcons {
+    height: 2.5em;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.FooterIcons:hover {
+    background: #ffffff;
+}
