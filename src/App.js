@@ -11,10 +11,11 @@ function App() {
 			<NavBar />
 				<Container>
 					<Switch>
-						<Route exact path="/" render={()=> < LandingPage />} />
+						<Route exact path="/" render={()=> <LandingPage />} />
 						<Route exact path="/dashboard" render={()=> <h1>Dashboard</h1>} />
 						<Route exact path="/login" render={()=> <h1>Log In</h1>} />
 						<Route exact path="/signup" render={()=> <h1>Sign Up</h1>} />
+						<Route render={()=><p>Page not found</p>} />
 					</Switch>
 				</Container>
 			<Footer />
