@@ -31,3 +31,9 @@
 .NavBarText:hover {
     color: #00000065;
 }
+
+.Active span {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+}

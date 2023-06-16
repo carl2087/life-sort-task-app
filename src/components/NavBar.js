@@ -23,7 +23,7 @@ const NavBar = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto text-start">
-                <NavLink className={styles.NavBarText} to='/dashboard'>
+                <NavLink className={`${styles.NavBarText} ${styles.NavLink}`} activeClassName={styles.Active} to='/dashboard'>
                         <img
                         src={ dashboard }
                         alt='Dashboard logo'
@@ -31,7 +31,7 @@ const NavBar = () => {
                     />
                     <span className='align-bottom'>Dashboard</span>
                 </NavLink>
-                <NavLink className={styles.NavBarText} to='/login' >
+                <NavLink className={`${styles.NavBarText} ${styles.NavLink}`} activeClassName={styles.Active} to='/login' >
                     <img
                         src={ opened }
                         alt='Dashboard logo'
@@ -39,7 +39,7 @@ const NavBar = () => {
                     />
                     <span className='align-bottom'>Log In</span>
                 </NavLink>
-                <NavLink className= {styles.NavBarText} to='/signup' >
+                <NavLink className={`${styles.NavBarText} ${styles.NavLink}`} activeClassName={styles.Active} to='/signup' >
                     <img
                         src={ signup }
                         alt='Dashboard logo'
