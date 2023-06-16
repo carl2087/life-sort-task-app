@@ -7,6 +7,7 @@ import './api/axiosDefaults'
 import LandingPage from './pages/landing-page/LandingPage';
 import SignUpForm from './pages/auth/SignUpForm';
 import LogInForm from './pages/auth/LogInForm';
+import ScrollButton from './components/ScrollButton';
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 						<Route render={()=><p>Page not found</p>} />
 					</Switch>
 				</Container>
+				<ScrollButton />
 			<Footer />
 		</div>
 	);
