@@ -3,38 +3,37 @@ import { useState } from 'react';
 import { Alert, Col, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import SignUpImage from '../../components/SignUpImage';
 import BtnStyles from '../../styles/Button.module.css'
 import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import styles from '../../styles/LogInSignUpForm.module.css'
 import axios from 'axios';
+import LogInImage from '../../components/LogInImage';
 
-const SignUpForm = () => {
+const LogInForm = () => {
 
-    const [signUpData, setSignUpData] = useState({
+    const [signInData, setSignInData] = useState({
         username: '',
-        password1: '',
-        password2: '',
-    });
-
-    const { username, password1, password2 } = signUpData;
+        password: '',
+    })
 
     const [errors, setErrors] = useState({});
 
     const history = useHistory();
 
+    const { username, password } = signInData;
+
     const handleChange = (event) => {
-        setSignUpData({
-            ...signUpData,
+        setSignInData({
+            ...signInData,
             [event.target.name]: event.target.value
-        })
+        });
     }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            await axios.post('/dj-rest-auth/registration/', signUpData);
-            history.push('/login')
+            await axios.post('/dj-rest-auth/login/', signInData);
+            history.push('/dashboard')
         } catch (error) {
             setErrors(error.response?.data)
         }
@@ -43,12 +42,12 @@ const SignUpForm = () => {
     return (
         <Row className='align-items-center justify-content-center'>
             <Col className='col-12 col-md-8 col-lg-6'>
-                <SignUpImage />
+                <LogInImage />
             </Col>
             <Col className='col-12 col-md-8 col-lg-6'>
-                <h1 className={`text-center ${styles.Header}`}>Sign Up</h1>
+                <h1 className={`text-center ${styles.Header}`}>Log In</h1>
                 <hr/>
-                <Form onSubmit={handleSubmit}>
+                <Form onSubmit={handleSubmit} >
                     <Form.Group className="mb-3" controlId="username">
                     <Form.Label className='d-none'>Username</Form.Label>
                     <Form.Control
@@ -64,38 +63,23 @@ const SignUpForm = () => {
                     <Alert variant='danger' key={idx}> { message } </Alert>
                     )}
 
-                    <Form.Group className="mb-3" controlId="password1">
+                    <Form.Group className="mb-3" controlId="password">
                     <Form.Label className='d-none'>Password</Form.Label>
                     <Form.Control
                     type="password"
                     placeholder="Password (Case-Sensitive)"
-                    name='password1'
-                    value={password1}
+                    name='password'
+                    value={password}
                     onChange={handleChange}
                     />
                     </Form.Group>
 
-                    {errors.password1?.map((message, idx) =>
-                    <Alert variant='danger' key={idx}> { message } </Alert>
-                    )}
-
-                    <Form.Group className="mb-3" controlId="password2">
-                    <Form.Label className='d-none'>Confirm password</Form.Label>
-                    <Form.Control
-                    type="password"
-                    placeholder="Confirm password (Case-Sensitive)"
-                    name='password2'
-                    value={password2}
-                    onChange={handleChange}
-                    />
-                    </Form.Group>
-
-                    {errors.password2?.map((message, idx) =>
+                    {errors.password?.map((message, idx) =>
                     <Alert variant='danger' key={idx}> { message } </Alert>
                     )}
 
                     <Button className={BtnStyles.ButtonStyle} type="submit">
-                    Sign Up
+                    Log In
                     </Button>
 
                     {errors.non_field_errors?.map((message, idx) => (
@@ -106,11 +90,11 @@ const SignUpForm = () => {
 
                     <hr/>
                     <p>
-                    Already have an account?
+                    Don't have an account?
                     </p>
-                    <Link to='/login'>
+                    <Link to='/signup'>
                         <Button className={BtnStyles.ButtonStyle} >
-                        Log In 
+                        Sign Up
                         </Button>
                     </Link>
                 </Form>
@@ -119,4 +103,4 @@ const SignUpForm = () => {
     )
 }
 
-export default SignUpForm
+export default LogInForm

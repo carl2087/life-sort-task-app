@@ -11,11 +11,11 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 const LandingPage = () => {
     return (
-        <Row className={`h-100 g-0 mx-auto ${styles.LandingPage}`}>
-            <Col className='col-12 col-md-6'>
+        <Row className={`h-100 g-0 mx-auto ${styles.LandingPage} justify-content-center`}>
+            <Col className='col-12 col-md-8 col-lg-6'>
                 <HeroImage />
             </Col>
-            <Col className='col-12 col-md-6'>
+            <Col className='col-12 col-md-8 col-lg-6 '>
                 <div className={styles.LifeSortLogo}>
                     <LifesortLogoWords  />
                     <p className={styles.LandingPageParagraph}>
@@ -26,7 +26,7 @@ const LandingPage = () => {
                     </p>
                 </div>
             </Col>
-            <Col className='col-12 col-md-4 offset-md-7 text-center'>
+            <Col className={`col-12 col-md-8 offset-lg-6 text-center ${styles.ButtonArea}`}>
                 <span>
                     <Link to='/login'>
                         <Button size='lg' className={BtnStyles.ButtonStyle}>
