@@ -32,6 +32,7 @@ const ScrollButton = () => {
         src={image}
         onClick={scrollToTop}
         style={{display: visible ? 'inline' : 'none'}}
+        alt='Scroll to top button'
         />
     )
 }

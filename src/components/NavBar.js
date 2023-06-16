@@ -7,8 +7,35 @@ import signup from '../assets/sign-up.svg'
 import opened from '../assets/door-open-icon.svg'
 import styles from '../styles/NavBar.module.css'
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
+import { useCurrentUser } from '../contexts/CurrentUserContext';
 
 const NavBar = () => {
+
+    const currentUser = useCurrentUser();
+
+    const loggedInIcons = <>{currentUser?.username}</>
+
+    const loggedOutIcons = (
+        <>
+            <NavLink className={`${styles.NavBarText} ${styles.NavLink}`} activeClassName={styles.Active} to='/login' >
+                <img
+                    src={ opened }
+                    alt='Dashboard logo'
+                    className={ styles.NavBarIcons }
+                />
+            <span className='align-bottom'>Log In</span>
+            </NavLink>
+            <NavLink className={`${styles.NavBarText} ${styles.NavLink}`} activeClassName={styles.Active} to='/signup' >
+                <img
+                    src={ signup }
+                    alt='Dashboard logo'
+                    className={ styles.NavBarIcons }
+                    />
+                    <span className='align-bottom'>Sign Up</span>
+            </NavLink>
+        </>
+    )
+
     return (
     <Navbar expand="md" className={ styles.NavBar }>
             <NavLink to='/dashboard'>
@@ -31,22 +58,7 @@ const NavBar = () => {
                     />
                     <span className='align-bottom'>Dashboard</span>
                 </NavLink>
-                <NavLink className={`${styles.NavBarText} ${styles.NavLink}`} activeClassName={styles.Active} to='/login' >
-                    <img
-                        src={ opened }
-                        alt='Dashboard logo'
-                        className={ styles.NavBarIcons }
-                    />
-                    <span className='align-bottom'>Log In</span>
-                </NavLink>
-                <NavLink className={`${styles.NavBarText} ${styles.NavLink}`} activeClassName={styles.Active} to='/signup' >
-                    <img
-                        src={ signup }
-                        alt='Dashboard logo'
-                        className={ styles.NavBarIcons }
-                        />
-                        <span className='align-bottom'>Sign Up</span>
-                </NavLink>
+                {currentUser ? loggedInIcons : loggedOutIcons}
             </Nav>
             </Navbar.Collapse>
     </Navbar>

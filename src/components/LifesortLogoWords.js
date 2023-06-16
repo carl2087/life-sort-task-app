@@ -4,7 +4,11 @@ import lifesort from '../assets/life-sort-logo-words.svg'
 
 const LifesortLogoWords = () => {
     return (
-        <Image src={lifesort} fluid />
+        <Image
+        src={lifesort}
+        fluid
+        alt='Lifesort logo'
+        />
     )
     }
 

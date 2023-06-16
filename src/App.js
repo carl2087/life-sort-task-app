@@ -10,21 +10,22 @@ import LogInForm from './pages/auth/LogInForm';
 import ScrollButton from './components/ScrollButton';
 
 function App() {
+
 	return (
-		<div className={ styles.App }>
-			<NavBar />
-				<Container>
-					<Switch>
-						<Route exact path="/" render={()=> <LandingPage />} />
-						<Route exact path="/dashboard" render={()=> <h1>Dashboard</h1>} />
-						<Route exact path="/login" render={()=> <LogInForm />} />
-						<Route exact path="/signup" render={()=> <SignUpForm />} />
-						<Route render={()=><p>Page not found</p>} />
-					</Switch>
-				</Container>
-				<ScrollButton />
-			<Footer />
-		</div>
+				<div className={ styles.App }>
+					<NavBar />
+						<Container>
+							<Switch>
+								<Route exact path="/" render={()=> <LandingPage />} />
+								<Route exact path="/dashboard" render={()=> <h1>Dashboard</h1>} />
+								<Route exact path="/login" render={()=> <LogInForm />} />
+								<Route exact path="/signup" render={()=> <SignUpForm />} />
+								<Route render={()=><p>Page not found</p>} />
+							</Switch>
+						</Container>
+						<ScrollButton />
+					<Footer />
+				</div>
 	);
 }
 

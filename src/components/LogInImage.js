@@ -7,6 +7,7 @@ const LogInImage = () => {
         <Image
             src={image}
             fluid
+            alt='Male sat at computer in a cartoon style'
         />
     )
 }

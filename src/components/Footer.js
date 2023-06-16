@@ -14,7 +14,7 @@ const Footer = () => {
                 <Col className='text-center align-self-center col-12 col-md-6'>
                     <img
                     src={ logo }
-                    alt='logo'
+                    alt='Lifesort logo'
                     className={ styles.FooterLogo }
                     />
                 </Col>

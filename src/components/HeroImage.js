@@ -5,7 +5,11 @@ import hero from '../assets/hero-image.png'
 
 const HeroImage = () => {
     return (
-        <Image src={hero} fluid />
+        <Image
+        src={hero}
+        fluid
+        alt='male and female near a desktop pc cartoon style'
+        />
     )
 }
 
