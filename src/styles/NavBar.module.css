@@ -20,4 +20,14 @@
 .NavBarText {
     font-size: 1.2em;
     color: black;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color .5s linear; 
+    -moz-transition: color .5s linear;  
+    -webkit-transition: color .5s linear; 
+    -ms-transition: color .5s linear; 
+}
+
+.NavBarText:hover {
+    color: #00000065;
 }

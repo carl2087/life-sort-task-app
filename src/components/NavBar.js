@@ -6,44 +6,47 @@ import dashboard from'../assets/dashboard.svg'
 import signup from '../assets/sign-up.svg'
 import opened from '../assets/door-open-icon.svg'
 import styles from '../styles/NavBar.module.css'
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 
 const NavBar = () => {
     return (
     <Navbar expand="md" className={ styles.NavBar }>
-            <Navbar.Brand >
-                <img
-                src={ logo }
-                alt='logo'
-                className= { styles.NavBarLogo }
-                />
-            </Navbar.Brand>
+            <NavLink to='/dashboard'>
+                <Navbar.Brand >
+                    <img
+                    src={ logo }
+                    alt='logo'
+                    className= { styles.NavBarLogo }
+                    />
+                </Navbar.Brand>
+            </NavLink>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto text-start">
-                <Nav.Link className={styles.NavBarText} >
+                <NavLink className={styles.NavBarText} to='/dashboard'>
                         <img
                         src={ dashboard }
                         alt='Dashboard logo'
                         className={ styles.NavBarIcons }
                     />
                     <span className='align-bottom'>Dashboard</span>
-                    </Nav.Link>
-                <Nav.Link className={styles.NavBarText} >
+                </NavLink>
+                <NavLink className={styles.NavBarText} to='/login' >
                     <img
                         src={ opened }
                         alt='Dashboard logo'
                         className={ styles.NavBarIcons }
                     />
                     <span className='align-bottom'>Log In</span>
-                    </Nav.Link>
-                <Nav.Link className= {styles.NavBarText} >
+                </NavLink>
+                <NavLink className= {styles.NavBarText} to='/signup' >
                     <img
                         src={ signup }
                         alt='Dashboard logo'
                         className={ styles.NavBarIcons }
                         />
                         <span className='align-bottom'>Sign Up</span>
-                </Nav.Link>
+                </NavLink>
             </Nav>
             </Navbar.Collapse>
     </Navbar>
