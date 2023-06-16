@@ -5,7 +5,8 @@ import HeroImage from '../../components/HeroImage';
 import styles from '../../styles/LandingPage.module.css'
 import LifesortLogoWords from '../../components/LifesortLogoWords';
 import Button from 'react-bootstrap/Button';
-import BtnStyles from '../../App.module.css'
+import BtnStyles from '../../styles/Button.module.css'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 const LandingPage = () => {
@@ -27,14 +28,18 @@ const LandingPage = () => {
             </Col>
             <Col className='col-12 col-md-4 offset-md-7 text-center'>
                 <span>
-                    <Button size='lg' className={BtnStyles.ButtonStyle}>
-                        Log In
-                    </Button>
+                    <Link to='/login'>
+                        <Button size='lg' className={BtnStyles.ButtonStyle}>
+                            Log In
+                        </Button>
+                    </Link>
                 </span>
                 <span>
-                    <Button size='lg' className={BtnStyles.ButtonStyle} >
-                        Sign Up
-                    </Button>
+                    <Link to='/signup'>
+                        <Button size='lg' className={BtnStyles.ButtonStyle} >
+                            Sign Up
+                        </Button>
+                    </Link>
                 </span>
             </Col>
         </Row>
