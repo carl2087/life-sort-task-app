@@ -42,7 +42,7 @@ const Footer = () => {
                     </span>
                 </Col>
                 <Row className='g-0'>
-                    <Col className='text-center align-self-center col-12'>
+                    <Col className='text-center align-self-end col-12'>
                         <CurrentYear />
                     </Col>
                 </Row>

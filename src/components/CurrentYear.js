@@ -6,7 +6,7 @@ const CurrentYear = () => {
 
     return (
         <span>
-            Lifesort task app created by Carl Ellis copyright {ThisYear}
+            Lifesort task app created by Carl Ellis &copy; {ThisYear}
         </span>
     )
 }
