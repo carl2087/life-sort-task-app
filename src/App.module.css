@@ -5,3 +5,16 @@
     flex-direction: column
 }
 
+.ButtonStyle {
+    background-color: #00abb3;
+    margin-right: 15px;
+    width: 175px;
+    margin-top: 15px;
+    border: #00abb3;
+}
+
+.ButtonStyle:hover {
+    color: black;
+    background-color: #b2b2b2;
+}
+

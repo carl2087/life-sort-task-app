@@ -34,7 +34,7 @@ const NavBar = () => {
                         alt='Dashboard logo'
                         className={ styles.NavBarIcons }
                     />
-                    <span className='align-bottom'>Log in</span>
+                    <span className='align-bottom'>Log In</span>
                     </Nav.Link>
                 <Nav.Link className= {styles.NavBarText} >
                     <img
@@ -42,7 +42,7 @@ const NavBar = () => {
                         alt='Dashboard logo'
                         className={ styles.NavBarIcons }
                         />
-                        <span className='align-bottom'>Sign up</span>
+                        <span className='align-bottom'>Sign Up</span>
                 </Nav.Link>
             </Nav>
             </Navbar.Collapse>

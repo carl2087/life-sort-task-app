@@ -12,7 +12,9 @@ function App() {
 				<Container>
 					<Switch>
 						<Route exact path="/" render={()=> < LandingPage />} />
-						<Route exact path="/signin" render={()=> <h1>Sign In</h1>} />
+						<Route exact path="/dashboard" render={()=> <h1>Dashboard</h1>} />
+						<Route exact path="/login" render={()=> <h1>Log In</h1>} />
+						<Route exact path="/signup" render={()=> <h1>Sign Up</h1>} />
 					</Switch>
 				</Container>
 			<Footer />
