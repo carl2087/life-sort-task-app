@@ -12,11 +12,14 @@ import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
 import Avatar from './Avatar';
 import axios from 'axios';
+import useClickOutside from '../hooks/useClickOutside';
 
 const NavBar = () => {
 
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
+
+    const {expanded, setExpanded, ref} = useClickOutside();
 
     const handleLogout = async () => {
         try {
@@ -100,25 +103,29 @@ const NavBar = () => {
     )
 
     return (
-    <Navbar expand="md" className={ styles.NavBar }>
-            <NavLink to='/'>
-                <Navbar.Brand >
-                    <img
-                    src={ logo }
-                    alt='logo'
-                    className= { styles.NavBarLogo }
-                    />
-                </Navbar.Brand>
-            </NavLink>
-            { currentUser && createTaskMenu }
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto text-start">
-            {currentUser ? loggedInIcons : loggedOutIcons}
-            </Nav>
-            </Navbar.Collapse>
-    </Navbar>
-    )
+        <Navbar expanded={expanded} expand="md" className={ styles.NavBar }>
+                <NavLink to='/'>
+                    <Navbar.Brand >
+                        <img
+                        src={ logo }
+                        alt='logo'
+                        className= { styles.NavBarLogo }
+                        />
+                    </Navbar.Brand>
+                </NavLink>
+                { currentUser && createTaskMenu }
+                <Navbar.Toggle
+                onClick={() => setExpanded(!expanded)}
+                aria-controls="basic-navbar-nav"
+                ref={ref}
+                />
+                <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="ms-auto text-start">
+                {currentUser ? loggedInIcons : loggedOutIcons}
+                </Nav>
+                </Navbar.Collapse>
+        </Navbar>
+        )
 };
 
 export default NavBar;
