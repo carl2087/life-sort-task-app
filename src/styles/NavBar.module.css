@@ -44,6 +44,14 @@
     color: black !important;
 }
 
+.NavBarDropdown:hover {
+    color: grey !important;
+    transition: color .2s linear; 
+    -moz-transition: color .2s linear;  
+    -webkit-transition: color .2s linear; 
+    -ms-transition: color .2s linear; 
+}
+
 .NavBarDropdownMenu {
     color: black;
     text-decoration: none;
