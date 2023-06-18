@@ -6,13 +6,10 @@ import btnStyles from "../../styles/Button.module.css";
 import Alert from "react-bootstrap/Alert";
 import { Col, Row } from "react-bootstrap";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRequest } from "../../api/axiosDefaults";
 
 function CreateCustomTask() {
 
-    const currentUser = useCurrentUser();
-    const [hasLoaded, setHasLoaded] = useState(false);
     const [errors, setErrors] = useState({});
 
     const [taskData, setTaskData] = useState({
