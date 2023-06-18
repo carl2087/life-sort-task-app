@@ -38,3 +38,17 @@
     text-underline-offset: 9px;
     text-decoration-thickness: 2px;
 }
+
+.NavBarDropdown {
+    margin-top: 8px;
+    color: black !important;
+}
+
+.NavBarDropdownMenu {
+    color: black;
+    text-decoration: none;
+}
+
+.NavBarDropdownMenu:hover {
+    color: black;
+}

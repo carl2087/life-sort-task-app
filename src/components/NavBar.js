@@ -1,6 +1,7 @@
 import React from 'react'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../assets/life-sort-logo-circle-logo.png'
 import dashboard from'../assets/dashboard.svg'
 import signup from '../assets/sign-up.svg'
@@ -58,7 +59,33 @@ const NavBar = () => {
                     />
                     <span className='align-bottom'>Dashboard</span>
                 </NavLink>
-                {currentUser ? loggedInIcons : loggedOutIcons}
+                <NavDropdown
+                    title="Create Task"
+                    id="basic-nav-dropdown"
+                    drop='down-centered'
+                    className={ `${styles.NavBarText} ${styles.NavBarDropdown}`}
+                    
+                >
+                    <NavDropdown.Item  >
+                        <NavLink to='/createquicktask'
+                        className={styles.NavBarDropdownMenu}>
+                        Quick Task
+                        </NavLink>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item>
+                        <NavLink to='/createcustomtask'
+                        className={styles.NavBarDropdownMenu}>
+                            Custom Task
+                        </NavLink>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item>
+                        <NavLink to='/createholidaytask'
+                        className={styles.NavBarDropdownMenu}>
+                            Holiday Task
+                        </NavLink>
+                    </NavDropdown.Item>
+                </NavDropdown>
+            {currentUser ? loggedInIcons : loggedOutIcons}
             </Nav>
             </Navbar.Collapse>
     </Navbar>
