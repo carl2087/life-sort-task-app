@@ -258,6 +258,7 @@ function CreateCustomTask() {
                 </Button>
                 <Button
                     className={`${btnStyles.ButtonStyle} `}
+                    onClick={() => history.goBack()}
                 >
                     Cancel
                 </Button>
