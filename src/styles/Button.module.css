@@ -12,10 +12,6 @@
     -ms-transition: color .5s linear; 
 }
 
-.ButtonStyle:focus {
-    background-color: #b2b2b2;
-}
-
 .ButtonStyle:hover {
     background-color: #b2b2b2;
 }

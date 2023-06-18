@@ -7,9 +7,58 @@ import LifesortLogoWords from '../../components/LifesortLogoWords';
 import Button from 'react-bootstrap/Button';
 import BtnStyles from '../../styles/Button.module.css'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { useCurrentUser, useSetCurrentUser } from '../../contexts/CurrentUserContext';
+import axios from 'axios';
 
 
 const LandingPage = () => {
+
+    const currentUser = useCurrentUser();
+    const setCurrentUser = useSetCurrentUser();
+
+    const handleLogout = async () => {
+        try {
+            await axios.post('dj-rest-auth/logout/');
+            setCurrentUser(null);
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    const loggedOutButtons = <>
+            <span>
+                <Link to='/login'>
+                    <Button size='lg' className={BtnStyles.ButtonStyle}>
+                        Log In
+                    </Button>
+                </Link>
+            </span>
+            <span>
+                <Link to='/signup'>
+                    <Button size='lg' className={BtnStyles.ButtonStyle} >
+                        Sign Up
+                    </Button>
+                </Link>
+            </span>
+        </>
+
+    const loggedInButtons = <>
+        <span>
+        <Link to='/dashboard'>
+            <Button size='lg' className={BtnStyles.ButtonStyle}>
+                Dashboard
+            </Button>
+        </Link>
+        </span>
+        <span>
+            <Link to='/' onClick = {handleLogout}>
+                <Button size='lg' className={BtnStyles.ButtonStyle} >
+                    Log out
+                </Button>
+            </Link>
+        </span>
+    </>
+
     return (
         <Row className={`h-100 g-0 mx-auto ${styles.LandingPage} justify-content-center`}>
             <Col className='col-12 col-md-8 col-lg-6'>
@@ -27,20 +76,7 @@ const LandingPage = () => {
                 </div>
             </Col>
             <Col className={`col-12 col-md-8 offset-lg-6 text-center ${styles.ButtonArea}`}>
-                <span>
-                    <Link to='/login'>
-                        <Button size='lg' className={BtnStyles.ButtonStyle}>
-                            Log In
-                        </Button>
-                    </Link>
-                </span>
-                <span>
-                    <Link to='/signup'>
-                        <Button size='lg' className={BtnStyles.ButtonStyle} >
-                            Sign Up
-                        </Button>
-                    </Link>
-                </span>
+                {currentUser ? loggedInButtons : loggedOutButtons}
             </Col>
         </Row>
     )
