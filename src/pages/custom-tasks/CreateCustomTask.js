@@ -64,7 +64,7 @@ function CreateCustomTask() {
 
         try {
             const {data} = await axiosRequest.post('/customtask/', formData);
-            history.push(`/customtasks/${data.id}/`)
+            history.push(`/customtask/${data.id}/`)
         } catch (error) {
             if (error.reponse?.status !== 401) {
                 setErrors(error.response.data)
