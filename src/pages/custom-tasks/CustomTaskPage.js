@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {Row,  Col } from 'react-bootstrap'
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
 import { axiosRequest } from '../../api/axiosDefaults';
+import DetailedCustomTask from './DetailedCustomTask';
 
 const CustomTaskPage = () => {
 
@@ -12,7 +13,7 @@ const CustomTaskPage = () => {
         const handleMount = async () => {
             try {
                 const [{data: customTask}] = await Promise.all([
-                    axiosRequest.get(`/customtask/${id}`)
+                    axiosRequest.get(`/customtask/${id}/`)
                 ])
                 setCustomTask({results: [customTask]})
                 console.log(customTask)
@@ -28,6 +29,7 @@ const CustomTaskPage = () => {
         <Row className='h-100'>
             <Col>
                 <h1>Custom Task</h1>
+                <DetailedCustomTask {...customTask.results[0]} setCustomTask={setCustomTask} customTaskPage />
             </Col>
         </Row>
     )
