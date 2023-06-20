@@ -18,7 +18,6 @@ const CustomTaskPage = () => {
                     axiosRequest.get(`/customtask/${id}/`)
                 ])
                 setCustomTask({results: [customTask]})
-                console.log(customTask)
             } catch (error) {
                 console.log(error)
             }
