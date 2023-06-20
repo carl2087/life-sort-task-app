@@ -11,6 +11,7 @@ import ScrollButton from './components/ScrollButton';
 import CreateCustomTask from './pages/custom-tasks/CreateCustomTask';
 import CustomTaskPage from './pages/custom-tasks/CustomTaskPage';
 import CustomTaskEdit from './pages/custom-tasks/CustomTaskEdit';
+import Dashboard from './pages/dashboard/Dashboard';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
 				<Container>
 					<Switch>
 						<Route exact path="/" render={()=> <LandingPage />} />
-						<Route exact path="/dashboard" render={()=> <h1>Dashboard</h1>} />
+						<Route exact path="/dashboard" render={()=> <Dashboard />} />
 						<Route exact path="/login" render={()=> <LogInForm />} />
 						<Route exact path="/signup" render={()=> <SignUpForm />} />
 						<Route exact path="/createcustomtask" render={() => <CreateCustomTask /> } />

@@ -3,4 +3,8 @@
     cursor: pointer;
     margin-bottom: 50px;
     margin-top: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
 }
