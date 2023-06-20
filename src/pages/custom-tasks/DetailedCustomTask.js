@@ -5,6 +5,8 @@ import Button from 'react-bootstrap/Button';
 import btnStyles from '../../styles/Button.module.css'
 import { axiosRequest } from '../../api/axiosDefaults';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
 
 
 const DetailedCustomTask = (props) => {
@@ -29,11 +31,20 @@ const DetailedCustomTask = (props) => {
     const handleDelete = async () => {
         try {
             await axiosRequest.delete(`/customtask/${id}/`);
-            history.goBack()
+            history.push('/dashboard')
         } catch (error) {
             console.log(error)
         }
     }
+
+    const handleEdit = () => {
+        history.push(`/customtask/${id}/edit`)
+    }
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
 
     return (
@@ -52,17 +63,33 @@ const DetailedCustomTask = (props) => {
                 <p>{ is_overdue ? 'Task is overdue!' : 'You are on schedule for your task!' }</p>
                 <Button
                 className={btnStyles.ButtonStyle}
-                onClick={() => {}}
+                onClick={handleEdit}
                 >
                     Edit
                 </Button>
                 <Button
                 className={btnStyles.ButtonStyle}
-                onClick={handleDelete}
+                onClick={handleShow}
                 >
                     Delete
                 </Button>
             </div>
+            
+        <>
+        <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+            <Modal.Title>Are you sure you want to delete this task?</Modal.Title>
+            </Modal.Header>
+            <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+                No go back!
+            </Button>
+            <Button variant="primary" onClick={handleDelete}>
+                Delete Task
+            </Button>
+            </Modal.Footer>
+        </Modal>
+        </>
         </Col>
     )
 }
