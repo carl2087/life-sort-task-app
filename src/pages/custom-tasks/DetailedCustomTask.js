@@ -4,6 +4,7 @@ import { Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import btnStyles from '../../styles/Button.module.css'
 import { axiosRequest } from '../../api/axiosDefaults';
+import { Link } from 'react-router-dom/cjs/react-router-dom';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
@@ -52,7 +53,9 @@ const DetailedCustomTask = (props) => {
     return (
         <Col className={` ${styles.TaskCol}`}>
             <div className='text-center'>
+                <Link to={`/customtask/${id}`} className={styles.TaskTitleLink}>
                 <h2 className={styles.TaskTitle}>{ title }</h2>
+                </Link>
                 <p>{ description }</p>
                 <p>Priority of task: { priority_state }</p>
                 <p>{ entertainment ? 'Entertainment is required' : 'No entertainment required'}</p>

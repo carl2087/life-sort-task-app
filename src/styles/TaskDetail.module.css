@@ -7,3 +7,16 @@
     border: solid 2px #00abb3;
     border-radius: 5px;
 }
+
+.TaskTitleLink {
+    text-decoration: none;
+    color: black;
+}
+
+.TaskTitleLink:hover {
+    color: #b2b2b2;
+    transition: color .5s linear; 
+    -moz-transition: color .5s linear;  
+    -webkit-transition: color .5s linear; 
+    -ms-transition: color .5s linear; 
+}
