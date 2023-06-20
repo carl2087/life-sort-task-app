@@ -3,11 +3,16 @@ import styles from '../../styles/TaskDetail.module.css'
 import { Col } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import btnStyles from '../../styles/Button.module.css'
+import { axiosRequest } from '../../api/axiosDefaults';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 const DetailedCustomTask = (props) => {
 
+    const history = useHistory();
+
     const {
+        id,
         budget,
         completed_state,
         description,
@@ -20,6 +25,15 @@ const DetailedCustomTask = (props) => {
         travel_required,
         work_or_leisure,
     } = props;
+
+    const handleDelete = async () => {
+        try {
+            await axiosRequest.delete(`/customtask/${id}/`);
+            history.goBack()
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
 
     return (
@@ -44,7 +58,7 @@ const DetailedCustomTask = (props) => {
                 </Button>
                 <Button
                 className={btnStyles.ButtonStyle}
-                onClick={() => {}}
+                onClick={handleDelete}
                 >
                     Delete
                 </Button>
