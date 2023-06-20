@@ -12,6 +12,11 @@ function CreateCustomTask() {
 
     const [errors, setErrors] = useState({});
 
+    const [checked, setChecked] = useState(false);
+
+    const [checked2, setChecked2] = useState(false);
+
+
     const [taskData, setTaskData] = useState({
         due_date: '',
         start_date: '',
@@ -47,6 +52,14 @@ function CreateCustomTask() {
         });
     }
 
+    const handleCheck = () => {
+        setChecked(!checked);
+    }
+
+    const handleCheck2 = () => {
+        setChecked2(!checked2);
+    }
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();
@@ -59,8 +72,8 @@ function CreateCustomTask() {
         formData.append('description', description)
         formData.append('title', title)
         formData.append('budget', budget)
-        formData.append('travel_required', travel_required)
-        formData.append('entertainment', entertainment)
+        formData.append('travel_required', checked)
+        formData.append('entertainment', checked)
 
         try {
             const {data} = await axiosRequest.post('/customtask/', formData);
@@ -147,10 +160,10 @@ function CreateCustomTask() {
                 <Form.Group className="mb-3" controlId="travel_required">
                     <Form.Check
                     type="checkbox"
+                    checked={checked}
                     label="Travel required?"
                     name="travel_required"
-                    value={travel_required}
-                    onChange={handleChange}
+                    onChange={handleCheck}
                     />
                 </Form.Group>
 
@@ -163,10 +176,10 @@ function CreateCustomTask() {
                 <Form.Group className="mb-3" controlId="entertainment">
                     <Form.Check
                     type="checkbox"
+                    checked={checked2}
                     label="Any entertainment needs?"
                     name="entertainment"
-                    value={entertainment}
-                    onChange={handleChange}
+                    onChange={handleCheck2}
                     />
                 </Form.Group>
 

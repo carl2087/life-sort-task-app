@@ -1,14 +1,10 @@
 import React from 'react'
 import { useCurrentUser } from '../../contexts/CurrentUserContext'
-import Avatar from '../../components/Avatar';
 
 const DetailedCustomTask = (props) => {
 
     const {
-        id,
         owner,
-        profile_image,
-        profile_id,
         budget,
         completed_state,
         description,
@@ -29,6 +25,15 @@ const DetailedCustomTask = (props) => {
         <div>
             <h1>{ title }</h1>
             <p>{ description }</p>
+            <p>{ budget }</p>
+            <p>{ completed_state }</p>
+            <p>{ due_date }</p>
+            <p>{ entertainment }</p>
+            <p>{ is_overdue }</p>
+            <p>{ priority_state }</p>
+            <p>{ work_or_leisure }</p>
+            <p>{ start_date }</p>
+            <p>{ travel_required }</p>
         </div>
         
     )
