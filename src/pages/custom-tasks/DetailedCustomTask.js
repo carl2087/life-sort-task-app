@@ -1,10 +1,13 @@
 import React from 'react'
-import { useCurrentUser } from '../../contexts/CurrentUserContext'
+import styles from '../../styles/TaskDetail.module.css'
+import { Col } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import btnStyles from '../../styles/Button.module.css'
+
 
 const DetailedCustomTask = (props) => {
 
     const {
-        owner,
         budget,
         completed_state,
         description,
@@ -18,24 +21,35 @@ const DetailedCustomTask = (props) => {
         work_or_leisure,
     } = props;
 
-    const currentUser = useCurrentUser();
-    const is_owner = currentUser?.username === owner
 
     return (
-        <div>
-            <h1>{ title }</h1>
-            <p>{ description }</p>
-            <p>{ budget }</p>
-            <p>{ completed_state }</p>
-            <p>{ due_date }</p>
-            <p>{ entertainment }</p>
-            <p>{ is_overdue }</p>
-            <p>{ priority_state }</p>
-            <p>{ work_or_leisure }</p>
-            <p>{ start_date }</p>
-            <p>{ travel_required }</p>
-        </div>
-        
+        <Col className={` ${styles.TaskCol}`}>
+            <div className='text-center'>
+                <h2 className={styles.TaskTitle}>{ title }</h2>
+                <p>{ description }</p>
+                <p>Priority of task: { priority_state }</p>
+                <p>{ entertainment ? 'Entertainment is required' : 'No entertainment required'}</p>
+                <p>{ travel_required ? 'Travel is required' : 'No travel required' }</p>
+                <p>Work or leisure: { work_or_leisure }</p>
+                <p>Budget required: £{ budget }</p>
+                <p>Planned start date: { start_date }</p>
+                <p>Expected due date for task: { due_date }</p>
+                <p>Current status for task: { completed_state }</p>
+                <p>{ is_overdue ? 'Task is overdue!' : 'You are on schedule for your task!' }</p>
+                <Button
+                className={btnStyles.ButtonStyle}
+                onClick={() => {}}
+                >
+                    Edit
+                </Button>
+                <Button
+                className={btnStyles.ButtonStyle}
+                onClick={() => {}}
+                >
+                    Delete
+                </Button>
+            </div>
+        </Col>
     )
 }
 

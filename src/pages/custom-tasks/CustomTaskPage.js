@@ -3,6 +3,8 @@ import {Row,  Col } from 'react-bootstrap'
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
 import { axiosRequest } from '../../api/axiosDefaults';
 import DetailedCustomTask from './DetailedCustomTask';
+import styles from '../../App.module.css'
+
 
 const CustomTaskPage = () => {
 
@@ -27,8 +29,8 @@ const CustomTaskPage = () => {
 
     return (
         <Row className='h-100'>
-            <Col>
-                <h1>Custom Task</h1>
+            <Col className='col-6 offset-3'>
+                <h1 className={`${styles.TaskPageTitle} text-center`}>Custom Task: {id}</h1>
                 <DetailedCustomTask {...customTask.results[0]} setCustomTask={setCustomTask} customTaskPage />
             </Col>
         </Row>

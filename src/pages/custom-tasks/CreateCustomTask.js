@@ -39,8 +39,6 @@ function CreateCustomTask() {
         description,
         title,
         budget,
-        travel_required,
-        entertainment,
     } = taskData;
 
     const history = useHistory();
