@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { axiosRequest } from '../../api/axiosDefaults';
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import DetailedCustomTask from '../custom-tasks/DetailedCustomTask';
+import NoResults from '../../assets/magnifying-glass.svg'
+import { Col, Container, Row } from 'react-bootstrap';
+import Asset from '../../components/Asset';
 
-const Customtasks = () => {
+const Customtasks = ({message}) => {
     const [customTasks, setCustomTasks] = useState({results: [] });
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
@@ -31,11 +34,20 @@ const Customtasks = () => {
                         <DetailedCustomTask key={customTask.id} {...customTask} />
                     ))
                 ) : (
-                    console.log('show no results')
+                    <Container>
+                        <Row>
+                            <Col>
+                            <Asset src={NoResults} message={message} />
+                            <p>No Results found!</p>
+                            </Col>
+                        </Row>
+                    </Container>
                 )}
                 </>
             ) : (
-                console.log('loading spinner not loading')
+                <Container>
+                    <Asset spinner />
+                </Container>
             )}
 
         </div>
