@@ -229,6 +229,7 @@ function CreateCustomTask() {
                         as="select"
                         name="priority_state"
                         onChange={handleChange}
+                        value={priority_state}
                     >
                     <option value="Low">Low</option>
                     <option value="Medium">Medium</option>
@@ -248,6 +249,7 @@ function CreateCustomTask() {
                         as="select"
                         name="completed_state"
                         onChange={handleChange}
+                        value={completed_state}
                     >
                     <option value="In progress">In Progress</option>
                     <option value="Completed">Completed</option>

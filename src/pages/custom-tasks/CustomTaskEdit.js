@@ -177,6 +177,7 @@
 						name="due_date"
 						value={due_date}
 						onChange={handleChange}
+						disabled
 						/>
 					</Form.Group>
 
@@ -193,6 +194,7 @@
 						name="start_date"
 						value={start_date}
 						onChange={handleChange}
+						disabled
 						/>
 					</Form.Group>
 
@@ -258,6 +260,7 @@
 							as="select"
 							name="work_or_leisure"
 							onChange={handleChange}
+							value={work_or_leisure}
 						>
 						<option value="Leisure">Leisure</option>
 						<option value="Work">Work</option>
@@ -276,6 +279,7 @@
 							as="select"
 							name="priority_state"
 							onChange={handleChange}
+							value={priority_state}
 						>
 						<option value="Low">Low</option>
 						<option value="Medium">Medium</option>
@@ -295,10 +299,11 @@
 							as="select"
 							name="completed_state"
 							onChange={handleChange}
+							value={completed_state}
 						>
 						<option value="In progress">In Progress</option>
-						<option value="Completed">Completed</option>
 						<option value="Overdue">Overdue</option>
+						<option value="Completed">Completed</option>
 						</Form.Select>
 					</Form.Group>
 

@@ -15,6 +15,9 @@ const Customtasks = ({message}) => {
         const fetchCustomTasks = async () => {
             try {
                 const {data} = await axiosRequest.get('/customtask/')
+                    data.results = data.results.filter((result) => {
+                        return result.completed_state !== 'Completed'
+                    });
                 setCustomTasks(data)
                 setHasLoaded(true)
             } catch (error) {
