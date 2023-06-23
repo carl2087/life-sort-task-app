@@ -4,6 +4,7 @@ import { axiosRequest } from '../../api/axiosDefaults';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import styles from '../../App.module.css'
+import DetailedQuickTask from './DetailedQuickTask';
 
 
 const QuickTaskPage = () => {
@@ -29,6 +30,7 @@ const QuickTaskPage = () => {
         <Row className='h-100'>
             <Col className='col-6 offset-3'>
                 <h1 className={`${styles.TaskPageTitle} text-center`}>Quick Task: {id}</h1>
+                <DetailedQuickTask {...quickTask.results[0]} setQuickTask={setQuickTask} quickTaskPage />
             </Col>
         </Row>
     )

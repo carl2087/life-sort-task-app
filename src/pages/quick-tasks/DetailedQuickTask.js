@@ -1,37 +1,32 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
+import { axiosRequest } from '../../api/axiosDefaults';
+import Modal from 'react-bootstrap/Modal';
+import btnStyles from '../../styles/Button.module.css'
+import Button from 'react-bootstrap/Button';
+import { useState } from 'react';
+import { Link } from 'react-router-dom/cjs/react-router-dom';
 import styles from '../../styles/TaskDetail.module.css'
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import btnStyles from '../../styles/Button.module.css'
-import { axiosRequest } from '../../api/axiosDefaults';
-import { Link } from 'react-router-dom/cjs/react-router-dom';
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
-import { useState } from 'react';
-import Modal from 'react-bootstrap/Modal';
 
 
-const DetailedCustomTask = (props) => {
+const DetailedQuickTask = (props) => {
 
     const history = useHistory();
 
     const {
         id,
-        budget,
-        completed_state,
-        description,
         due_date,
-        entertainment,
-        is_overdue,
+        completed_state,
         priority_state,
-        start_date,
         title,
-        travel_required,
-        work_or_leisure,
+        description,
+        is_overdue,
     } = props;
 
     const handleDelete = async () => {
         try {
-            await axiosRequest.delete(`/customtask/${id}/`);
+            await axiosRequest.delete(`/quicktask/${id}/`);
             handleClose();
             history.goBack()
         } catch (error) {
@@ -40,7 +35,7 @@ const DetailedCustomTask = (props) => {
     }
 
     const handleEdit = () => {
-        history.push(`/customtask/${id}/edit`)
+        history.push(`/quicktask/${id}/edit`)
     }
 
     const [show, setShow] = useState(false);
@@ -51,19 +46,16 @@ const DetailedCustomTask = (props) => {
     return (
         <Col className={`${styles.TaskCol}`}>
             <div className='text-center'>
-                <Link to={`/customtask/${id}`} className={styles.TaskTitleLink}>
+                <Link to={`/quicktask/${id}`} className={styles.TaskTitleLink}>
                 <h2 className={styles.TaskTitle}>{ title }</h2>
                 </Link>
                 <p>{ description }</p>
                 <p>Priority of task: { priority_state }</p>
-                <p>{ entertainment ? 'Entertainment is required' : 'No entertainment required'}</p>
-                <p>{ travel_required ? 'Travel is required' : 'No travel required' }</p>
-                <p>Work or leisure: { work_or_leisure }</p>
-                <p>Budget required: £{ budget }</p>
-                <p>Planned start date: { start_date }</p>
                 <p>Expected due date for task: { due_date }</p>
                 <p>Current status for task: { completed_state }</p>
-                <p>{ is_overdue ? <span className={styles.Overdue}>Task is overdue!</span> : <span className={styles.OnTime}>You are on schedule for your task!</span> }</p> 
+                <p>{ is_overdue ?
+                <span className={styles.Overdue}>Task is overdue!</span>
+                : <span className={styles.OnTime}>You are on schedule for your task!</span> }</p> 
                 <Button
                 className={btnStyles.ButtonStyle}
                 onClick={handleEdit}
@@ -97,4 +89,4 @@ const DetailedCustomTask = (props) => {
     )
 }
 
-export default DetailedCustomTask
+export default DetailedQuickTask
