@@ -9,6 +9,8 @@ import CurrentYear from './CurrentYear'
 
 const Footer = () => {
     return (
+        <>
+        <span className={styles.FootSpacer}></span>
         <footer className={ styles.Footer }>
             <Row className='g-0 h-100'>
                 <Col className='text-center align-self-center col-12 col-md-6'>
@@ -48,6 +50,7 @@ const Footer = () => {
                 </Row>
             </Row>
         </footer>
+        </>
     )
 }
 

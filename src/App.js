@@ -19,7 +19,7 @@ function App() {
 	return (
 		<div className={ styles.App }>
 			<NavBar />
-				<Container>
+				<Container fluid>
 					<Switch>
 						<Route exact path="/" render={()=> <LandingPage />} />
 						<Route exact path="/dashboard" render={()=> <Dashboard />} />

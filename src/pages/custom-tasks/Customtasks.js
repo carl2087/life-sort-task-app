@@ -6,6 +6,8 @@ import NoResults from '../../assets/magnifying-glass.svg'
 import { Col, Container, Row } from 'react-bootstrap';
 import Asset from '../../components/Asset';
 import styles from '../../App.module.css'
+import InfiniteScroll from 'react-infinite-scroll-component';
+import { fetchMoreData } from '../../utils/utils';
 
 const Customtasks = ({message}) => {
     const [customTasks, setCustomTasks] = useState({results: [] });
@@ -35,9 +37,17 @@ const Customtasks = ({message}) => {
                 <>
                 <h1 className={`text-center ${styles.TaskPageTitle}`}>Custom Tasks</h1>
                 {customTasks.results.length ? (
-                    customTasks.results.map(customTask => (
-                        <DetailedCustomTask key={customTask.id} {...customTask} />
-                    ))
+                    <InfiniteScroll
+                    children={
+                        customTasks.results.map(customTask => (
+                            <DetailedCustomTask key={customTask.id} {...customTask} />
+                        ))
+                    }
+                    dataLength={customTasks.results.length}
+                    loader={<Asset spinner/>}
+                    hasMore={!!customTasks.next}
+                    next={() => fetchMoreData(customTasks, setCustomTasks)}
+                    />
                 ) : (
                         <Row className={`text-center ${styles.TaskLists}`}>
                             <Col className='col-lg-6 offset-3 '>

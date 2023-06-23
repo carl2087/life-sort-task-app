@@ -20,3 +20,7 @@
 .FooterIcons:hover {
     background: #ffffff;
 }
+
+.FootSpacer {
+    margin-top: 50px;
+}
