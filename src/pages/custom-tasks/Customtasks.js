@@ -8,8 +8,9 @@ import Asset from '../../components/Asset';
 import styles from '../../App.module.css'
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { fetchMoreData } from '../../utils/utils';
+import { Link } from 'react-router-dom/cjs/react-router-dom';
 
-const Customtasks = ({message}) => {
+const Customtasks = () => {
     const [customTasks, setCustomTasks] = useState({results: [] });
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
@@ -35,7 +36,9 @@ const Customtasks = ({message}) => {
         <div>
             {hasLoaded ? (
                 <>
+                <Link to='/customtasks' className={`${styles.TaskPageLink}`}>
                 <h1 className={`text-center ${styles.TaskPageTitle}`}>Custom Tasks</h1>
+                </Link>
                 {customTasks.results.length ? (
                     <InfiniteScroll
                     children={

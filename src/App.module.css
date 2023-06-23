@@ -8,6 +8,7 @@
 .TaskPageTitle {
     font-size: 2em;
     margin-top: 50px;
+    text-decoration: none;
 }
 
 .NoResultsImage {
@@ -17,4 +18,17 @@
 .TaskLists {
     margin-top: 50px;
     font-size: 1em;
+}
+
+.TaskPageLink {
+    text-decoration: none;
+    color: black;
+}
+
+.TaskPageLink:hover {
+    color: #b2b2b2;
+    transition: color .5s linear; 
+    -moz-transition: color .5s linear;  
+    -webkit-transition: color .5s linear; 
+    -ms-transition: color .5s linear; 
 }

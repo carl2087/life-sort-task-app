@@ -1,47 +1,34 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 import Form from "react-bootstrap/Form";
+import Alert from "react-bootstrap/Alert";
+import { Col, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import styles from '../../styles/CreateTasks.module.css'
 import btnStyles from "../../styles/Button.module.css";
-import Alert from "react-bootstrap/Alert";
-import { Col, Row } from "react-bootstrap";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { axiosRequest } from "../../api/axiosDefaults";
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { axiosRequest } from '../../api/axiosDefaults';
 
-function CreateCustomTask() {
+const CreateQuickTask = () => {
 
     const [errors, setErrors] = useState({});
 
-    const [checked, setChecked] = useState(false);
-
-    const [checked2, setChecked2] = useState(false);
-
+    const history = useHistory();
 
     const [taskData, setTaskData] = useState({
         due_date: '',
-        start_date: '',
         completed_state: 'In progress',
         priority_state: 'Low',
-        work_or_leisure: 'Leisure',
-        description: '',
         title: '',
-        budget: 0,
-        travel_required: false,
-        entertainment: false,
+        description: '',
     })
 
     const {
         due_date,
-        start_date,
         completed_state,
         priority_state,
-        work_or_leisure,
-        description,
         title,
-        budget,
+        description,
     } = taskData;
-
-    const history = useHistory();
 
     const handleChange = (event) => {
         setTaskData({
@@ -50,34 +37,21 @@ function CreateCustomTask() {
         });
     }
 
-    const handleCheck = () => {
-        setChecked(!checked);
-    }
-
-    const handleCheck2 = () => {
-        setChecked2(!checked2);
-    }
-
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();
 
         formData.append('due_date', due_date)
-        formData.append('start_date', start_date)
         formData.append('completed_state', completed_state)
         formData.append('priority_state', priority_state)
-        formData.append('work_or_leisure', work_or_leisure)
-        formData.append('description', description)
         formData.append('title', title)
-        formData.append('budget', budget)
-        formData.append('travel_required', checked)
-        formData.append('entertainment', checked)
+        formData.append('description', description)
 
         try {
-            await axiosRequest.post('/customtask/', formData);
+            await axiosRequest.post('/quicktask/', formData);
             history.push('/dashboard')
         } catch (error) {
-            if (error.reponse?.status !== 401) {
+            if (error.response?.status !== 401) {
                 setErrors(error.response.data)
             }
         }
@@ -86,7 +60,7 @@ function CreateCustomTask() {
     return (
         <Row className='align-items-center justify-content-center'>
             <Col className='col-12 col-md-8 col-lg-6'>
-            <h1 className={`text-center ${styles.Header}`}>Create custom task</h1>
+            <h1 className={`text-center ${styles.Header}`}>Create quick task</h1>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="title">
                     <Form.Label >Title</Form.Label>
@@ -139,90 +113,6 @@ function CreateCustomTask() {
                     </Alert>
                 ))}
 
-                <Form.Group className="mb-3" controlId="start_date">
-                    <Form.Label >Planned start date</Form.Label>
-                    <Form.Control
-                    type='datetime-local'
-                    name="start_date"
-                    value={start_date}
-                    onChange={handleChange}
-                    />
-                </Form.Group>
-
-                {errors?.start_date?.map((message, idx) => (
-                <Alert variant="danger" key={idx}>
-                    {message}
-                    </Alert>
-                ))}
-
-                <Form.Group className="mb-3" controlId="travel_required">
-                    <Form.Check
-                    type="checkbox"
-                    checked={checked}
-                    label="Travel required?"
-                    name="travel_required"
-                    onChange={handleCheck}
-                    />
-                </Form.Group>
-
-                {errors?.travel_required?.map((message, idx) => (
-                <Alert variant="danger" key={idx}>
-                    {message}
-                    </Alert>
-                ))}
-
-                <Form.Group className="mb-3" controlId="entertainment">
-                    <Form.Check
-                    type="checkbox"
-                    checked={checked2}
-                    label="Any entertainment needs?"
-                    name="entertainment"
-                    onChange={handleCheck2}
-                    />
-                </Form.Group>
-
-                {errors?.entertainment?.map((message, idx) => (
-                <Alert variant="danger" key={idx}>
-                    {message}
-                    </Alert>
-                ))}
-
-                <Form.Group className="mb-3" controlId="budget">
-                    <Form.Label>
-                        Budget required
-                    </Form.Label>
-                    <Form.Control
-                    type="number"
-                    name="budget"
-                    value={budget}
-                    onChange={handleChange}
-                    />
-                </Form.Group>
-
-                {errors?.budget?.map((message, idx) => (
-                <Alert variant="danger" key={idx}>
-                    {message}
-                    </Alert>
-                ))}
-
-                <Form.Group className="mb-3" controlId="work_or_leisure">
-                    <Form.Label >Work or leisure?</Form.Label>
-                    <Form.Select
-                        as="select"
-                        name="work_or_leisure"
-                        onChange={handleChange}
-                    >
-                    <option value="Leisure">Leisure</option>
-                    <option value="Work">Work</option>
-                    </Form.Select>
-                </Form.Group>
-
-                {errors?.work_or_leisure?.map((message, idx) => (
-                <Alert variant="danger" key={idx}>
-                    {message}
-                    </Alert>
-                ))}
-
                 <Form.Group className="mb-3" controlId="priority_state">
                     <Form.Label >Priority</Form.Label>
                     <Form.Select
@@ -268,7 +158,7 @@ function CreateCustomTask() {
                 className={`${btnStyles.ButtonStyle}`}
                 type="submit"
                 >
-                    Create custom task
+                    Create quick task
                 </Button>
                 <Button
                     className={`${btnStyles.ButtonStyle} `}
@@ -290,4 +180,4 @@ function CreateCustomTask() {
     )
 }
 
-export default CreateCustomTask
+export default CreateQuickTask

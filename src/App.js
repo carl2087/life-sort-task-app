@@ -13,6 +13,7 @@ import CustomTaskPage from './pages/custom-tasks/CustomTaskPage';
 import CustomTaskEdit from './pages/custom-tasks/CustomTaskEdit';
 import Dashboard from './pages/dashboard/Dashboard';
 import Customtasks from './pages/custom-tasks/Customtasks';
+import CreateQuickTask from './pages/quick-tasks/CreateQuickTask';
 
 function App() {
 
@@ -29,6 +30,8 @@ function App() {
 						<Route exact path="/createcustomtask" render={() => <CreateCustomTask /> } />
 						<Route exact path="/customtask/:id" render={() => <CustomTaskPage /> } />
 						<Route exact path="/customtask/:id/edit" render={() => <CustomTaskEdit />} />
+						<Route exact path="/createquicktask" render={() => <CreateQuickTask /> } />
+						{/* <Route exact path="/quicktask/:id" render={() => <CreateQuickTask /> } /> */}
 						<Route render={()=><p>Page not found</p>} />
 					</Switch>
 				</Container>
