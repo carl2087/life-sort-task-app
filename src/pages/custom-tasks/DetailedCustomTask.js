@@ -50,7 +50,7 @@ const DetailedCustomTask = (props) => {
 
 
     return (
-        <Col className={` ${styles.TaskCol}`}>
+        <Col className={`${styles.TaskCol}`}>
             <div className='text-center'>
                 <Link to={`/customtask/${id}`} className={styles.TaskTitleLink}>
                 <h2 className={styles.TaskTitle}>{ title }</h2>
@@ -64,7 +64,7 @@ const DetailedCustomTask = (props) => {
                 <p>Planned start date: { start_date }</p>
                 <p>Expected due date for task: { due_date }</p>
                 <p>Current status for task: { completed_state }</p>
-                <p>{ is_overdue ? 'Task is overdue!' : 'You are on schedule for your task!' }</p>
+                <p>{ is_overdue ? <span className={styles.Overdue}>Task is overdue!</span> : <span className={styles.OnTime}>You are on schedule for your task!</span> }</p> 
                 <Button
                 className={btnStyles.ButtonStyle}
                 onClick={handleEdit}

@@ -6,6 +6,7 @@
 .TaskCol {
     border: solid 2px #00abb3;
     border-radius: 5px;
+    margin-top: 15px;
 }
 
 .TaskTitleLink {
@@ -19,4 +20,20 @@
     -moz-transition: color .5s linear;  
     -webkit-transition: color .5s linear; 
     -ms-transition: color .5s linear; 
+}
+
+.Overdue {
+    background: #f5000079;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: solid #b30000 thin; 
+    border-radius: 5px;
+}
+
+.OnTime {
+    background: #00f55e79;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: solid #24b300 thin; 
+    border-radius: 5px;
 }

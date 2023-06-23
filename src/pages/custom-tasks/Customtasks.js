@@ -5,6 +5,7 @@ import DetailedCustomTask from '../custom-tasks/DetailedCustomTask';
 import NoResults from '../../assets/magnifying-glass.svg'
 import { Col, Container, Row } from 'react-bootstrap';
 import Asset from '../../components/Asset';
+import styles from '../../App.module.css'
 
 const Customtasks = ({message}) => {
     const [customTasks, setCustomTasks] = useState({results: [] });
@@ -32,19 +33,19 @@ const Customtasks = ({message}) => {
         <div>
             {hasLoaded ? (
                 <>
+                <h1 className={`text-center ${styles.TaskPageTitle}`}>Custom Tasks</h1>
                 {customTasks.results.length ? (
                     customTasks.results.map(customTask => (
                         <DetailedCustomTask key={customTask.id} {...customTask} />
                     ))
                 ) : (
-                    <Container>
-                        <Row>
-                            <Col>
-                            <Asset src={NoResults} message={message} />
-                            <p>No Results found!</p>
+                        <Row className={`text-center ${styles.TaskLists}`}>
+                            <Col className='col-lg-6 offset-3 '>
+                            <img className={styles.NoResultsImage} src={NoResults} alt='No results' />
+                            <br />
+                            <h2 className={`${styles.TaskPageTitle} text-center`}>No Custom tasks found!</h2>
                             </Col>
                         </Row>
-                    </Container>
                 )}
                 </>
             ) : (
@@ -52,7 +53,6 @@ const Customtasks = ({message}) => {
                     <Asset spinner />
                 </Container>
             )}
-
         </div>
     )
 }

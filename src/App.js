@@ -12,6 +12,7 @@ import CreateCustomTask from './pages/custom-tasks/CreateCustomTask';
 import CustomTaskPage from './pages/custom-tasks/CustomTaskPage';
 import CustomTaskEdit from './pages/custom-tasks/CustomTaskEdit';
 import Dashboard from './pages/dashboard/Dashboard';
+import Customtasks from './pages/custom-tasks/Customtasks';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
 					<Switch>
 						<Route exact path="/" render={()=> <LandingPage />} />
 						<Route exact path="/dashboard" render={()=> <Dashboard />} />
+						<Route exact path="/customtasks" render={() => <Customtasks />} />
 						<Route exact path="/login" render={()=> <LogInForm />} />
 						<Route exact path="/signup" render={()=> <SignUpForm />} />
 						<Route exact path="/createcustomtask" render={() => <CreateCustomTask /> } />
