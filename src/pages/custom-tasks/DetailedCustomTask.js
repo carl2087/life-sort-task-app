@@ -48,7 +48,6 @@ const DetailedCustomTask = (props) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-
     return (
         <Col className={`${styles.TaskCol}`}>
             <div className='text-center'>
