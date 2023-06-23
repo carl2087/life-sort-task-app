@@ -64,10 +64,10 @@
 
 					if (is_owner) {
 
-						const formattedDueDate = new Date(due_date).toISOString().slice(0, 16);
-						const formattedStartDate = new Date(start_date).toISOString().slice(0, 16);
-						setChecked(travel_required);
-						setChecked2(entertainment);
+					const formattedDueDate = new Date(due_date).toISOString().slice(0, 16);
+					const formattedStartDate = new Date(start_date).toISOString().slice(0, 16);
+					setChecked(travel_required);
+					setChecked2(entertainment);
 
 					setTaskData({
 					due_date: formattedDueDate,
@@ -177,7 +177,6 @@
 						name="due_date"
 						value={due_date}
 						onChange={handleChange}
-						disabled
 						/>
 					</Form.Group>
 
@@ -194,7 +193,6 @@
 						name="start_date"
 						value={start_date}
 						onChange={handleChange}
-						disabled
 						/>
 					</Form.Group>
 
