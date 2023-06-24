@@ -75,7 +75,7 @@ const LandingPage = () => {
                     </p>
                 </div>
             </Col>
-            <Col className={`col-12 col-md-8 offset-lg-6 text-center ${styles.ButtonArea}`}>
+            <Col className={`col-12 col-md-6 offset-lg-6 text-center ${styles.ButtonArea}`}>
                 {currentUser ? loggedInButtons : loggedOutButtons}
             </Col>
         </Row>
