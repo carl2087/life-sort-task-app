@@ -22,25 +22,46 @@ const Footer = () => {
                 </Col>
                 <Col className='text-center align-self-center col-12 col-md-6'>
                     <span>
+                    <a
+                        href='https://en-gb.facebook.com/'
+                        target='_blank'
+                        rel='noreferrer'
+                        aria-label='Link to Facebook'
+                        >
                         <img
                         src={ FbookLogo }
                         alt='Facebook logo'
                         className={ styles.FooterIcons }
                         />
+                        </a>
                     </span>
                     <span>
+                    <a
+                        href='https://twitter.com/'
+                        target='_blank'
+                        rel='noreferrer'
+                        aria-label='Link to Twitter'
+                        >
                         <img
                         src={ TwitterLogo }
                         alt='Twitter logo'
                         className={ styles.FooterIcons }
                         />
+                        </a>
                     </span>
                     <span>
+                        <a
+                        href='https://www.youtube.com/index?feature=signin'
+                        target='_blank'
+                        rel='noreferrer'
+                        aria-label='Link to youtube'
+                        >
                         <img
                         src={ YouTubeLogo }
                         alt='YouTube logo'
                         className={ styles.FooterIcons }
                         />
+                        </a>
                     </span>
                 </Col>
                 <Row className='g-0'>
