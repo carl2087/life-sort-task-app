@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image } from 'react-bootstrap'
+import Image from 'react-bootstrap/Image';
 import image from '../assets/log-in-image.png'
 
 const LogInImage = () => {

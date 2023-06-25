@@ -1,4 +1,3 @@
-
 import React from 'react'
 import Image from 'react-bootstrap/Image';
 import hero from '../assets/hero-image.png'
