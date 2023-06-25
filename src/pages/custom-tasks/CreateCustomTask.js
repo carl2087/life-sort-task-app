@@ -7,15 +7,19 @@ import Alert from "react-bootstrap/Alert";
 import { Col, Row } from "react-bootstrap";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosRequest } from "../../api/axiosDefaults";
+import useCheckboxState from "../../hooks/useCheckboxState";
 
 function CreateCustomTask() {
 
     const [errors, setErrors] = useState({});
 
-    const [checked, setChecked] = useState(false);
-
-    const [checked2, setChecked2] = useState(false);
-
+    const {
+        checkboxState,
+        handleCheckboxChange
+    } = useCheckboxState({
+        travel_required: false,
+        entertainment: false,
+    });
 
     const [taskData, setTaskData] = useState({
         due_date: '',
@@ -50,28 +54,20 @@ function CreateCustomTask() {
         });
     }
 
-    const handleCheck = () => {
-        setChecked(!checked);
-    }
-
-    const handleCheck2 = () => {
-        setChecked2(!checked2);
-    }
-
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();
 
-        formData.append('due_date', due_date)
-        formData.append('start_date', start_date)
-        formData.append('completed_state', completed_state)
-        formData.append('priority_state', priority_state)
-        formData.append('work_or_leisure', work_or_leisure)
-        formData.append('description', description)
-        formData.append('title', title)
-        formData.append('budget', budget)
-        formData.append('travel_required', checked)
-        formData.append('entertainment', checked)
+        formData.append('due_date', due_date);
+        formData.append('start_date', start_date);
+        formData.append('completed_state', completed_state);
+        formData.append('priority_state', priority_state);
+        formData.append('work_or_leisure', work_or_leisure);
+        formData.append('description', description);
+        formData.append('title', title);
+        formData.append('budget', budget);
+        formData.append('travel_required', checkboxState.travel_required);
+        formData.append('entertainment', checkboxState.entertainment);
 
         try {
             await axiosRequest.post('/customtask/', formData);
@@ -158,10 +154,10 @@ function CreateCustomTask() {
                 <Form.Group className="mb-3" controlId="travel_required">
                     <Form.Check
                     type="checkbox"
-                    checked={checked}
+                    checked={checkboxState.travel_required}
                     label="Travel required?"
                     name="travel_required"
-                    onChange={handleCheck}
+                    onChange={() => handleCheckboxChange('travel_required')}
                     />
                 </Form.Group>
 
@@ -174,10 +170,10 @@ function CreateCustomTask() {
                 <Form.Group className="mb-3" controlId="entertainment">
                     <Form.Check
                     type="checkbox"
-                    checked={checked2}
+                    checked={checkboxState.entertainment}
                     label="Any entertainment needs?"
                     name="entertainment"
-                    onChange={handleCheck2}
+                    onChange={() => handleCheckboxChange('entertainment')}
                     />
                 </Form.Group>
 
