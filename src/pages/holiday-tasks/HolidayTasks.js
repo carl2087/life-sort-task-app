@@ -57,7 +57,7 @@ const HolidayTasks = () => {
                             <Col className='col-lg-6 offset-3 '>
                             <img className={styles.NoResultsImage} src={NoResults} alt='No results' />
                             <br />
-                            <h2 className={`${styles.TaskPageTitle} text-center`}>No Custom tasks found!</h2>
+                            <h2 className={`${styles.TaskPageTitle} text-center`}>No Holiday tasks found!</h2>
                             </Col>
                         </Row>
                 )}
