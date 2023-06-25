@@ -142,7 +142,7 @@ const HolidayTaskEdit = () => {
         formData.append('entertainment', checkboxState.entertainment);
 
         try {
-            await axiosRequest.post('/holiday/', formData);
+            await axiosRequest.put(`/holiday/${id}/`, formData);
             history.push('/dashboard')
         } catch (error) {
             if (error.reponse?.status !== 401) {
