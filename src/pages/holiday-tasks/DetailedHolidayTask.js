@@ -63,10 +63,10 @@ const DetailedHolidayTask = (props) => {
                 <p>{ passport ? 'Passport is okay' : 'Need to get passport' }</p>
                 <p>{ holiday_insurance ? 'Holiday insurance is okay' : 'Still need holiday insurance' }</p>
                 <p>{ suitcases_packed ? 'Suitcases are packed' : 'Still need to pack suitcases' }</p>
-                <p>{ car_hire ? 'Car hire is okay' : 'Still need car hire' }</p>
-                <p>{ tickets ? 'Tickets are okay' : 'Still need tickets' }</p>
+                <p>{ car_hire ? 'Car hire is okay' : 'Car hire not required' }</p>
+                <p>{ tickets ? 'Tickets are okay' : 'No ticket requirements' }</p>
                 <p>{ entertainment ? 'Entertainment is required' : 'No entertainment required'}</p>
-                <p>{ clothes ? 'Clothes all bought' : 'Still need to buy clothes' }</p>
+                <p>{ clothes ? 'Clothes okay' : 'No clothes required' }</p>
                 <p>{ holiday_paid_in_full ? 'Holiday is all paid for' : 'Still need to finish paying for holiday' }</p>
                 <p>Current status for task: { completed_state }</p>
                 <p>{ is_overdue ? <span className={styles.Overdue}>Your holiday plan is overdue!</span> : <span className={styles.OnTime}>You are on schedule for your holiday!</span> }</p> 
