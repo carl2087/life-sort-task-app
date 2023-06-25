@@ -311,18 +311,22 @@
 						</Alert>
 					))}
 
-					<Button
-					className={`${btnStyles.ButtonStyle} `}
-					type="submit"
-					>
-						Save changes
-					</Button>
-					<Button
+				<Row>
+                    <Col className="xs-12 text-center">
+						<Button
 						className={`${btnStyles.ButtonStyle} `}
-						onClick={() => history.goBack()}
-					>
-						Cancel edit
-					</Button>
+						type="submit"
+						>
+							Save changes
+						</Button>
+						<Button
+							className={`${btnStyles.ButtonStyle} `}
+							onClick={() => history.goBack()}
+						>
+							Cancel edit
+						</Button>
+					</Col>
+                </Row>
 
 					{errors.non_field_errors?.map((message, idx) => 
 					<Alert key={idx} className="mt-3" variant="danger">

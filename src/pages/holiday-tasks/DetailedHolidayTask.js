@@ -36,14 +36,14 @@ const DetailedHolidayTask = (props) => {
         try {
             await axiosRequest.delete(`/holiday/${id}/`);
             handleClose();
-            history.goBack();
+            window.location.reload();
         } catch (error) {
             console.log(error)
         }
     }
 
     const handleEdit = () => {
-        history.push(`/holiday/${id}/edit`)
+        history.push(`/holidaytask/${id}/edit`)
     }
 
     const [show, setShow] = useState(false);
@@ -69,7 +69,7 @@ const DetailedHolidayTask = (props) => {
                 <p>{ clothes ? 'Clothes all bought' : 'Still need to buy clothes' }</p>
                 <p>{ holiday_paid_in_full ? 'Holiday is all paid for' : 'Still need to finish paying for holiday' }</p>
                 <p>Current status for task: { completed_state }</p>
-                <p>{ is_overdue ? <span className={styles.Overdue}>Your holiday plan is overdue!</span> : <span className={styles.OnTime}>You are on schedule for your task!</span> }</p> 
+                <p>{ is_overdue ? <span className={styles.Overdue}>Your holiday plan is overdue!</span> : <span className={styles.OnTime}>You are on schedule for your holiday!</span> }</p> 
                 <Button
                 className={btnStyles.ButtonStyle}
                 onClick={handleEdit}

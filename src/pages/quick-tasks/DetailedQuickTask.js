@@ -28,7 +28,7 @@ const DetailedQuickTask = (props) => {
         try {
             await axiosRequest.delete(`/quicktask/${id}/`);
             handleClose();
-            history.goBack()
+            window.location.reload();
         } catch (error) {
             console.log(error)
         }
