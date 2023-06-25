@@ -17,6 +17,7 @@ import CreateQuickTask from './pages/quick-tasks/CreateQuickTask';
 import QuickTaskPage from './pages/quick-tasks/QuickTaskPage';
 import QuickTaskEdit from './pages/quick-tasks/QuickTaskEdit';
 import QuickTasks from './pages/quick-tasks/QuickTasks';
+import HolidayTaskPage from './pages/holiday-tasks/HolidayTaskPage';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
 						<Route exact path="/quicktask/:id" render={() => <QuickTaskPage /> } />
 						<Route exact path="/quicktask/:id/edit" render={() => <QuickTaskEdit /> } />
 						<Route exact path="/quicktasks" render={() => <QuickTasks />} />
+						<Route exact path="/holidaytask/:id" render={() => <HolidayTaskPage />} />
 						<Route render={()=><p>Page not found</p>} />
 					</Switch>
 				</Container>

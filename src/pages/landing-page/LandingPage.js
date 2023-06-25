@@ -60,7 +60,7 @@ const LandingPage = () => {
     </>
 
     return (
-        <Row className={`h-100 g-0 mx-auto ${styles.LandingPage} justify-content-center`}>
+        <Row className={`mx-auto ${styles.LandingPage} justify-content-center`}>
             <Col className='col-12 col-md-8 col-lg-6'>
                 <HeroImage />
             </Col>
