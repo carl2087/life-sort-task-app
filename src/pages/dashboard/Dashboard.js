@@ -2,6 +2,7 @@ import React from 'react'
 import Customtasks from '../custom-tasks/Customtasks';
 import { Col, Row } from 'react-bootstrap';
 import QuickTasks from '../quick-tasks/QuickTasks';
+import HolidayTasks from '../holiday-tasks/HolidayTasks';
 
 const Dashboard = () => {
 
@@ -15,7 +16,7 @@ const Dashboard = () => {
                     <QuickTasks />
                 </Col>
                 <Col className='md-4'>
-                    <h2>Holiday tasks heres</h2>
+                    <HolidayTasks />
                 </Col>
             </Row>
     )
