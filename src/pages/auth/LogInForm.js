@@ -44,7 +44,7 @@ const LogInForm = () => {
     }
 
     return (
-        <Row className='align-items-center justify-content-center'>
+        <Row className='align-items-center '>
             <Col className='col-12 col-md-8 col-lg-6'>
                 <LogInImage />
             </Col>
