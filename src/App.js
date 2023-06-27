@@ -23,6 +23,7 @@ import CreateHolidayTask from './pages/holiday-tasks/CreateHolidayTask';
 import HolidayTasks from './pages/holiday-tasks/HolidayTasks';
 import HolidayTaskEdit from './pages/holiday-tasks/HolidayTaskEdit';
 import ProfilePage from './pages/profiles/ProfilePage';
+import ProfileEdit from './pages/profiles/ProfileEdit';
 
 function App() {
 
@@ -48,6 +49,7 @@ function App() {
 						<Route exact path="/holidaytasks" render={() => <HolidayTasks />} />
 						<Route exact path="/holidaytask/:id/edit" render={() => <HolidayTaskEdit />} />
 						<Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+						<Route exact path='/profile/:id/edit' render={() => <ProfileEdit />} />
 						<Route render={()=><p>Page not found</p>} />
 					</Switch>
 				</Container>
