@@ -5,6 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../assets/life-sort-logo-circle-logo.png'
 import dashboard from'../assets/dashboard.png'
 import opened from '../assets/door-open-icon.png'
+import signup from '../assets/door-open-icon.png'
 import closed from'../assets/door-close-icon.png'
 import styles from '../styles/NavBar.module.css'
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
@@ -90,14 +91,14 @@ const NavBar = () => {
                 />
                 <span className='align-bottom'>Log In</span>
             </NavLink>
-            {/* <NavLink className={`${styles.NavBarText} ${styles.NavLink}`} activeClassName={styles.Active} to='/signup' >
+            <NavLink className={`${styles.NavBarText} ${styles.NavLink}`} activeClassName={styles.Active} to='/signup' >
                 <img
                     src={ signup }
                     alt='Pencil and Paper logo'
                     className={ styles.NavBarIcons }
                     />
                     <span className='align-bottom'>Sign Up</span>
-            </NavLink> */}
+            </NavLink>
         </>
     )
 

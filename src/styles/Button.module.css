@@ -3,8 +3,6 @@
     color: black;
     margin: 15px;
     width: 175px;
-    margin-top: 15px;
-    margin-bottom: 15px;
     border: #00abb3;
     transition: color .5s linear; 
     -moz-transition: color .5s linear;  
