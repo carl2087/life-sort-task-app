@@ -52,8 +52,8 @@ const Customtasks = () => {
                     next={() => fetchMoreData(customTasks, setCustomTasks)}
                     />
                 ) : (
-                        <Row className={`text-center ${styles.TaskLists}`}>
-                            <Col className='col-lg-6 offset-3 '>
+                        <Row className={`text-center ${styles.TaskLists} align-items-center`}>
+                            <Col className='col-12'>
                             <img className={styles.NoResultsImage} src={NoResults} alt='No results' />
                             <br />
                             <h2 className={`${styles.TaskPageTitle} text-center`}>No Custom tasks found!</h2>
