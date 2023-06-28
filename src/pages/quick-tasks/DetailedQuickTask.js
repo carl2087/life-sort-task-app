@@ -8,9 +8,12 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import styles from '../../styles/TaskDetail.module.css'
 import Col from 'react-bootstrap/Col';
+import { useRedirect } from '../../hooks/useRedirect';
 
 
 const DetailedQuickTask = (props) => {
+
+    useRedirect('loggedOut');
 
     const history = useHistory();
 

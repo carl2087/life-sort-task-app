@@ -7,8 +7,11 @@
 	import { Col, Row } from "react-bootstrap";
 	import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
 	import { axiosRequest } from "../../api/axiosDefaults";
+import { useRedirect } from "../../hooks/useRedirect";
 
 	function CustomTaskEdit() {
+
+		useRedirect('loggedOut');
 
 		const [errors, setErrors] = useState({});
 

@@ -7,9 +7,12 @@ import Button from "react-bootstrap/Button";
 import { Col, Row } from "react-bootstrap";
 import styles from '../../styles/CreateTasks.module.css'
 import btnStyles from "../../styles/Button.module.css";
+import { useRedirect } from '../../hooks/useRedirect';
 
 
 const HolidayTaskEdit = () => {
+
+    useRedirect('loggedOut');
 
     const [errors, setErrors] = useState({});
 

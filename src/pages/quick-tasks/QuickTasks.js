@@ -8,9 +8,12 @@ import Asset from '../../components/Asset';
 import { fetchMoreData } from '../../utils/utils';
 import { Col, Container, Row } from 'react-bootstrap';
 import NoResults from '../../assets/magnifying-glass.svg'
+import { useRedirect } from '../../hooks/useRedirect';
 
 
 const QuickTasks = () => {
+
+    useRedirect('loggedOut');
 
     const [quickTasks, setQuickTasks] = useState({results: []});
     const [hasLoaded, setHasLoaded] = useState(false);

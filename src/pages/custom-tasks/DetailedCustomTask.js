@@ -8,9 +8,12 @@ import { Link } from 'react-router-dom/cjs/react-router-dom';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
+import { useRedirect } from '../../hooks/useRedirect';
 
 
 const DetailedCustomTask = (props) => {
+
+    useRedirect('loggedOut');
 
     const history = useHistory();
 

@@ -5,9 +5,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import styles from '../../App.module.css'
 import DetailedQuickTask from './DetailedQuickTask';
+import { useRedirect } from '../../hooks/useRedirect';
 
 
 const QuickTaskPage = () => {
+
+    useRedirect('loggedOut');
 
     const {id} = useParams();
     const [quickTask, setQuickTask] = useState({results: []});

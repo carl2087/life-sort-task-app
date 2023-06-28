@@ -9,8 +9,12 @@ import styles from '../../App.module.css'
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { fetchMoreData } from '../../utils/utils';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
+import { useRedirect } from '../../hooks/useRedirect';
 
 const Customtasks = () => {
+
+    useRedirect('loggedOut');
+
     const [customTasks, setCustomTasks] = useState({results: [] });
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();

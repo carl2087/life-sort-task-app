@@ -5,9 +5,12 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
 import { axiosRequest } from '../../api/axiosDefaults';
 import DetailedCustomTask from './DetailedCustomTask';
 import styles from '../../App.module.css'
+import { useRedirect } from '../../hooks/useRedirect';
 
 
 const CustomTaskPage = () => {
+
+    useRedirect('loggedOut');
 
     const { id } = useParams();
     const [customTask, setCustomTask] = useState( {results: []} );

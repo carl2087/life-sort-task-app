@@ -8,9 +8,12 @@ import styles from '../../styles/TaskDetail.module.css'
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import Button from 'react-bootstrap/Button';
 import btnStyles from '../../styles/Button.module.css'
+import { useRedirect } from '../../hooks/useRedirect';
 
 
 const DetailedHolidayTask = (props) => {
+
+    useRedirect('loggedOut');
 
     const history = useHistory();
 

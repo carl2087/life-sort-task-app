@@ -9,9 +9,11 @@ import { Link } from 'react-router-dom';
 import btnStyles from '../../styles/Button.module.css'
 import styles from '../../styles/Dashboard.module.css'
 import titleStyle from '../../App.module.css'
+import { useRedirect } from '../../hooks/useRedirect';
 
 const Dashboard = () => {
 
+    useRedirect('loggedOut');
 
     return (
             <Row>

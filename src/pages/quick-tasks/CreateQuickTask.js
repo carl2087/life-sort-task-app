@@ -7,8 +7,11 @@ import styles from '../../styles/CreateTasks.module.css'
 import btnStyles from "../../styles/Button.module.css";
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosRequest } from '../../api/axiosDefaults';
+import { useRedirect } from '../../hooks/useRedirect';
 
 const CreateQuickTask = () => {
+
+    useRedirect('loggedOut');
 
     const [errors, setErrors] = useState({});
 

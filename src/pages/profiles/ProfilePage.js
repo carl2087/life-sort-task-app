@@ -8,8 +8,11 @@ import Asset from '../../components/Asset';
 import Button from 'react-bootstrap/Button'
 import btnStyles from '../../styles/Button.module.css'
 import { Link } from 'react-router-dom';
+import { useRedirect } from '../../hooks/useRedirect';
 
 const ProfilePage = () => {
+
+    useRedirect('loggedOut');
 
     const [hasLoaded, setHasLoaded] = useState(false)
     const currentUser = useCurrentUser();
@@ -49,7 +52,7 @@ const ProfilePage = () => {
     return (
         <div>
             <Row>
-                <Col className='col-8 offset-2 text-center'>
+                <Col className='col-12 text-center'>
                 {hasLoaded ?  (
                     <>               
                     <Avatar src={image} height={150} />

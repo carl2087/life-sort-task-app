@@ -8,8 +8,11 @@ import { Col, Row } from "react-bootstrap";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosRequest } from "../../api/axiosDefaults";
 import useCheckboxState from "../../hooks/useCheckboxState";
+import { useRedirect } from "../../hooks/useRedirect";
 
 function CreateCustomTask() {
+
+    useRedirect('loggedOut');
 
     const [errors, setErrors] = useState({});
 

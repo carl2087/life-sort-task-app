@@ -5,9 +5,12 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
 import { axiosRequest } from '../../api/axiosDefaults';
 import DetailedHolidayTask from './DetailedHolidayTask';
 import styles from '../../App.module.css'
+import { useRedirect } from '../../hooks/useRedirect';
 
 
 const HolidayTaskPage = () => {
+
+    useRedirect('loggedOut');
 
     const { id } = useParams();
     const [holidayTask, setHolidayTask] = useState( {results: []} );

@@ -1,19 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import { useCurrentUser } from '../../contexts/CurrentUserContext'
-import { useSetCurrentUser } from '../../contexts/CurrentUserContext'
-import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
-import { axiosRequest } from '../../api/axiosDefaults';
+import React, { useEffect, useState } from "react";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
+import {
+    useHistory,
+    useParams,
+} from "react-router-dom/cjs/react-router-dom.min";
+import { axiosRequest } from "../../api/axiosDefaults";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useRef } from "react";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import btnStyles from '../../styles/Button.module.css'
+import btnStyles from "../../styles/Button.module.css";
 import Alert from "react-bootstrap/Alert";
-import styles from '../../styles/Profile.module.css'
+import styles from "../../styles/Profile.module.css";
+import { useRedirect } from "../../hooks/useRedirect";
 
 const ProfileEdit = () => {
+
+    useRedirect('loggedOut');
 
     const currentUser = useCurrentUser();
     const setCurrentUser = useSetCurrentUser();
@@ -22,9 +28,9 @@ const ProfileEdit = () => {
     const imageFile = useRef();
 
     const [profileData, setProfileData] = useState({
-        name: '',
-        content: '',
-        image: '',
+        name: "",
+        content: "",
+        image: "",
     });
 
     const { name, content, image } = profileData;
@@ -33,50 +39,49 @@ const ProfileEdit = () => {
 
     useEffect(() => {
         const handleMount = async () => {
-            if (currentUser?.profile_id?.toString() === id) {
-                try {
-                    const { data } = await axiosRequest.get(`/profiles/${id}`);
-                    const { name, content, image } = data;
-                    setProfileData({ name, content, image });
-                    console.log(data)
-                } catch (error) {
-                    console.log(error)
-                    history.push('/')
-                }
-            } else {
-                history.push('/')
+        if (currentUser?.profile_id?.toString() === id) {
+            try {
+            const { data } = await axiosRequest.get(`/profiles/${id}`);
+            const { name, content, image } = data;
+            setProfileData({ name, content, image });
+            } catch (error) {
+            console.log(error);
+            history.push("/");
             }
+        } else {
+            history.push("/");
+        }
         };
         handleMount();
-    }, [currentUser, history, id])
+    }, [currentUser, history, id]);
 
     const handleChange = (event) => {
         setProfileData({
-            ...profileData,
-            [event.target.name]: event.target.value,
+        ...profileData,
+        [event.target.name]: event.target.value,
         });
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();
-        formData.append('name', name);
-        formData.append('content', content);
+        formData.append("name", name);
+        formData.append("content", content);
 
         if (imageFile?.current?.files[0]) {
-            formData.append('image', imageFile?.current?.files[0]);
+        formData.append("image", imageFile?.current?.files[0]);
         }
 
         try {
-            const { data } = await axiosRequest.put(`/profiles/${id}/`, formData);
-            setCurrentUser((currentUser) => ({
-                ...currentUser,
-                profile_image: data.image,
-            }));
-            history.goBack();
+        const { data } = await axiosRequest.put(`/profiles/${id}/`, formData);
+        setCurrentUser((currentUser) => ({
+            ...currentUser,
+            profile_image: data.image,
+        }));
+        history.goBack();
         } catch (error) {
-            console.log(error)
-            setErrors(errors.response?.data);
+        console.log(error);
+        setErrors(errors.response?.data);
         }
     };
 
@@ -85,39 +90,39 @@ const ProfileEdit = () => {
         <Form.Group>
             <Form.Label>Bio</Form.Label>
             <Form.Control
-                as="textarea"
-                value={content}
-                onChange={handleChange}
-                name="content"
-                rows={7}
+            as="textarea"
+            value={content}
+            onChange={handleChange}
+            name="content"
+            rows={7}
             />
         </Form.Group>
 
         {errors?.content?.map((message, idx) => (
-        <Alert variant="danger" key={idx}>
+            <Alert variant="danger" key={idx}>
             {message}
-        </Alert>
+            </Alert>
         ))}
 
-            <Button
+        <Button
             className={btnStyles.ButtonStyle}
             onClick={() => history.goBack()}
-            >
+        >
             Cancel
-            </Button>
-            <Button className={btnStyles.ButtonStyle} type="submit">
+        </Button>
+        <Button className={btnStyles.ButtonStyle} type="submit">
             Save
-            </Button>
+        </Button>
         </>
-    )
+    );
 
     return (
         <Form onSubmit={handleSubmit}>
-            <Row className={styles.ProfileFormRow}>
-                <Col className='col-12 col-md-6 text-center'>
-                <Form.Group>
+        <Row className={styles.ProfileFormRow}>
+            <Col className="col-12 col-md-6 text-center">
+            <Form.Group>
                 {image && (
-                <figure >
+                <figure>
                     <Image className={styles.ProfileImage} src={image} fluid />
                 </figure>
                 )}
@@ -136,7 +141,7 @@ const ProfileEdit = () => {
                 </div>
                 <Form.Control
                 className={styles.ProfileFormImageControl}
-                type='file'
+                type="file"
                 id="image-upload"
                 ref={imageFile}
                 accept="image/*"
@@ -149,14 +154,12 @@ const ProfileEdit = () => {
                     }
                 }}
                 />
-                </Form.Group>
-                </Col>
-                <Col className="text-center col-12 col-md-6">
-                    {textFields}
-                </Col>
-            </Row>
+            </Form.Group>
+            </Col>
+            <Col className="text-center col-12 col-md-6">{textFields}</Col>
+        </Row>
         </Form>
-    )
-}
+    );
+};
 
-export default ProfileEdit
+export default ProfileEdit;
