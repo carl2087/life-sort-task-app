@@ -11,6 +11,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import btnStyles from '../../styles/Button.module.css'
 import Alert from "react-bootstrap/Alert";
+import styles from '../../styles/Profile.module.css'
 
 const ProfileEdit = () => {
 
@@ -112,47 +113,46 @@ const ProfileEdit = () => {
 
     return (
         <Form onSubmit={handleSubmit}>
-            <Row>
-                <Col>
-                
+            <Row className={styles.ProfileFormRow}>
+                <Col className='col-12 col-md-6 text-center'>
                 <Form.Group>
-            {image && (
-            <figure>
-                <Image src={image} fluid />
-            </figure>
-            )}
-            {errors?.image?.map((message, idx) => (
-            <Alert variant="danger" key={idx}>
-                {message}
-            </Alert>
-            ))}
-            <div>
-            <Form.Label
-                className={`${btnStyles.ButtonStyle} btn my-auto`}
-                htmlFor="image-upload"
-            >
-                Change the image
-            </Form.Label>
-            </div>
-            <Form.Control
-            type='file'
-            id="image-upload"
-            ref={imageFile}
-            accept="image/*"
-            onChange={(e) => {
-                if (e.target.files.length) {
-                setProfileData({
-                    ...profileData,
-                    image: URL.createObjectURL(e.target.files[0]),
-                });
-                }
-            }}
-            />
-        </Form.Group>
-        <div className="d-md-none">{textFields}</div>
-    </Col>
-    <Col md={5} lg={6} className="d-none d-md-block p-0 p-md-2 text-center">
-        {textFields}
+                {image && (
+                <figure >
+                    <Image className={styles.ProfileImage} src={image} fluid />
+                </figure>
+                )}
+                {errors?.image?.map((message, idx) => (
+                <Alert variant="danger" key={idx}>
+                    {message}
+                </Alert>
+                ))}
+                <div>
+                <Form.Label
+                    className={`${btnStyles.ButtonStyle} btn my-auto`}
+                    htmlFor="image-upload"
+                >
+                    Change the image
+                </Form.Label>
+                </div>
+                <Form.Control
+                className={styles.ProfileFormImageControl}
+                type='file'
+                id="image-upload"
+                ref={imageFile}
+                accept="image/*"
+                onChange={(e) => {
+                    if (e.target.files.length) {
+                    setProfileData({
+                        ...profileData,
+                        image: URL.createObjectURL(e.target.files[0]),
+                    });
+                    }
+                }}
+                />
+                </Form.Group>
+                </Col>
+                <Col className="text-center col-12 col-md-6">
+                    {textFields}
                 </Col>
             </Row>
         </Form>

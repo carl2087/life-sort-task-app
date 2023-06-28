@@ -54,7 +54,7 @@ const ProfilePage = () => {
                     <>               
                     <Avatar src={image} height={150} />
                     <h1>{name.length ? `${name}'s profile` : `${owner}'s profile`}</h1>
-                    <p>{content.length ? `About me:${content}` : `Why not edit your profile and add an about me description?` }</p>
+                    <p>{content.length ? `${content}` : `Why not edit your profile and add an about me description?` }</p>
                     <Button
                     onClick={handleEdit}
                     className={btnStyles.ButtonStyle}

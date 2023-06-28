@@ -1,0 +1,12 @@
+.ProfileImage {
+    height: 250px;
+    border-radius: 10px;
+}
+
+.ProfileFormRow {
+    margin-top: 50px;
+}
+
+.ProfileFormImageControl {
+    margin-top: 50px;
+}
