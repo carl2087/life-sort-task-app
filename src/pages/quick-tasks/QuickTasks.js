@@ -11,12 +11,14 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import NoResults from '../../assets/magnifying-glass.svg'
 import { useRedirect } from '../../hooks/useRedirect';
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
 
 
 const QuickTasks = () => {
 
     useRedirect('loggedOut');
 
+    const currentUser = useCurrentUser();
     const [quickTasks, setQuickTasks] = useState({results: []});
     const [hasLoaded, setHasLoaded] = useState(false);
     const {pathname} = useLocation();
@@ -35,7 +37,7 @@ const QuickTasks = () => {
         }
         setHasLoaded(false);
         fetchQuickTasks();
-    }, [pathname])
+    }, [pathname, currentUser])
 
 
     return (

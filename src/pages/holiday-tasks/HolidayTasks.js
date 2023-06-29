@@ -12,12 +12,14 @@ import { fetchMoreData } from '../../utils/utils';
 import DetailedHolidayTask from './DetailedHolidayTask';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import { useRedirect } from '../../hooks/useRedirect';
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
 
 
 const HolidayTasks = () => {
 
     useRedirect('loggedOut');
 
+    const currentUser = useCurrentUser();
     const [holidayTasks, setHolidayTasks] = useState({results: []});
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
@@ -36,7 +38,7 @@ const HolidayTasks = () => {
         }
         setHasLoaded(false)
         fetchHolidayTasks()
-    }, [pathname])
+    }, [pathname, currentUser])
 
     return (
         <div>

@@ -12,11 +12,13 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import { fetchMoreData } from '../../utils/utils';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import { useRedirect } from '../../hooks/useRedirect';
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
 
 const Customtasks = () => {
 
     useRedirect('loggedOut');
 
+    const currentUser = useCurrentUser();
     const [customTasks, setCustomTasks] = useState({results: [] });
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
@@ -35,7 +37,7 @@ const Customtasks = () => {
         }
         setHasLoaded(false)
         fetchCustomTasks()
-    }, [pathname])
+    }, [pathname, currentUser])
 
     return (
         <div>
