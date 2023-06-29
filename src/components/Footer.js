@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../styles/Footer.module.css'
-import { Col, Row } from 'react-bootstrap'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import logo from '../assets/life-sort-logo-words.svg'
 import FbookLogo from '../assets/facebook-square-icon.svg'
 import TwitterLogo from '../assets/twitter-square-icon.svg'

@@ -4,7 +4,8 @@ import Button from "react-bootstrap/Button";
 import styles from '../../styles/CreateTasks.module.css'
 import btnStyles from "../../styles/Button.module.css";
 import Alert from "react-bootstrap/Alert";
-import { Col, Row } from "react-bootstrap";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosRequest } from "../../api/axiosDefaults";
 import useCheckboxState from "../../hooks/useCheckboxState";

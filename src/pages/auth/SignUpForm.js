@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
-import { Alert, Col, Row } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import SignUpImage from '../../components/SignUpImage';

@@ -5,7 +5,8 @@ import { axiosRequest } from '../../api/axiosDefaults';
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import Button from "react-bootstrap/Button";
-import { Col, Row } from "react-bootstrap";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import styles from '../../styles/CreateTasks.module.css'
 import btnStyles from "../../styles/Button.module.css";
 import { useRedirect } from '../../hooks/useRedirect';

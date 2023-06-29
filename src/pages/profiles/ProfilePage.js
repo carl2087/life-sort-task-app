@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useCurrentUser } from '../../contexts/CurrentUserContext'
 import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosRequest } from '../../api/axiosDefaults';
-import { Row, Col,} from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Avatar from '../../components/Avatar';
 import Asset from '../../components/Asset';
 import Button from 'react-bootstrap/Button'

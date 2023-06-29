@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
-import { Col, Row } from "react-bootstrap";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Button from "react-bootstrap/Button";
 import styles from '../../styles/CreateTasks.module.css'
 import btnStyles from "../../styles/Button.module.css";

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom/cjs/react-router-dom';
 import { axiosRequest } from '../../api/axiosDefaults';
-import { Col, Container, Row } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 import styles from '../../App.module.css'
 import Asset from '../../components/Asset';
 import NoResults from '../../assets/magnifying-glass.svg'

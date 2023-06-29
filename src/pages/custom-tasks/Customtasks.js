@@ -3,7 +3,9 @@ import { axiosRequest } from '../../api/axiosDefaults';
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import DetailedCustomTask from '../custom-tasks/DetailedCustomTask';
 import NoResults from '../../assets/magnifying-glass.svg'
-import { Col, Container, Row } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 import Asset from '../../components/Asset';
 import styles from '../../App.module.css'
 import InfiniteScroll from 'react-infinite-scroll-component';

@@ -6,7 +6,9 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import DetailedQuickTask from './DetailedQuickTask';
 import Asset from '../../components/Asset';
 import { fetchMoreData } from '../../utils/utils';
-import { Col, Container, Row } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
 import NoResults from '../../assets/magnifying-glass.svg'
 import { useRedirect } from '../../hooks/useRedirect';
 

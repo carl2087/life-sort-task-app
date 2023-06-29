@@ -2,8 +2,7 @@ import styles from '../src/App.module.css'
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import Container  from 'react-bootstrap/Container';
-import Route from "react-router-dom/Route";
-import Switch from "react-router-dom/Switch";
+import {Switch, Route} from "react-router-dom";
 import './api/axiosDefaults'
 import LandingPage from './pages/landing-page/LandingPage';
 import SignUpForm from './pages/auth/SignUpForm';
