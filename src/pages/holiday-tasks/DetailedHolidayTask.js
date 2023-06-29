@@ -41,7 +41,6 @@ const DetailedHolidayTask = (props) => {
             handleClose();
             window.location.reload();
         } catch (error) {
-            console.log(error)
         }
     }
 

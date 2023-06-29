@@ -21,7 +21,6 @@ const LandingPage = () => {
             await axios.post('dj-rest-auth/logout/');
             setCurrentUser(null);
         } catch (error) {
-            console.log(error);
         }
     };
 

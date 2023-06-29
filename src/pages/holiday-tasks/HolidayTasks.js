@@ -32,7 +32,6 @@ const HolidayTasks = () => {
                 setHolidayTasks(data)
                 setHasLoaded(true)
             } catch (error) {
-                console.log(error)
             }
         }
         setHasLoaded(false)

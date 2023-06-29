@@ -88,7 +88,6 @@ import { useRedirect } from "../../hooks/useRedirect";
 				}
 				else { history.push('/')};
 			} catch (error) {
-				console.log(error)
 			}
 		}
 		handleMount();

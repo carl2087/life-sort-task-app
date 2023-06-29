@@ -61,7 +61,6 @@ const QuickTaskEdit = () => {
                 }
                 else {history.push('/')}
             } catch (error) {
-                console.log(error)
             }
         }
         handleMount();

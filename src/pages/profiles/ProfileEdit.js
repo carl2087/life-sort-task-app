@@ -45,7 +45,6 @@ const ProfileEdit = () => {
             const { name, content, image } = data;
             setProfileData({ name, content, image });
             } catch (error) {
-            console.log(error);
             history.push("/");
             }
         } else {
@@ -80,7 +79,6 @@ const ProfileEdit = () => {
         }));
         history.goBack();
         } catch (error) {
-        console.log(error);
         setErrors(errors.response?.data);
         }
     };
