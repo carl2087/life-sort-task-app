@@ -49,6 +49,14 @@ const ProfilePage = () => {
         history.push(`/profile/${id}/edit`)
     }
 
+    const handlePasswordChange = () => {
+        history.push(`/profile/${id}/changepassword`)
+    }
+
+    const handleNameChange = () => {
+        history.push(`/profile/${id}/changename`)
+    }
+
     return (
         <div>
             <Row>
@@ -62,6 +70,16 @@ const ProfilePage = () => {
                     onClick={handleEdit}
                     className={btnStyles.ButtonStyle}
                     >Edit profile
+                    </Button>
+                    <Button
+                    onClick={handlePasswordChange}
+                    className={btnStyles.ButtonStyle}
+                    >Edit password
+                    </Button>
+                    <Button
+                    onClick={handleNameChange}
+                    className={btnStyles.ButtonStyle}
+                    >Edit username
                     </Button>
                     <br/>
                     <span>

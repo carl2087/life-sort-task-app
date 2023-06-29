@@ -24,6 +24,8 @@ import HolidayTaskEdit from './pages/holiday-tasks/HolidayTaskEdit';
 import ProfilePage from './pages/profiles/ProfilePage';
 import ProfileEdit from './pages/profiles/ProfileEdit';
 import NotFound from './components/NotFound';
+import UserpasswordForm from './pages/profiles/UserpasswordForm';
+import UsernameForm from './pages/profiles/UsernameForm';
 
 function App() {
 
@@ -50,6 +52,8 @@ function App() {
 						<Route exact path="/holidaytask/:id/edit" render={() => <HolidayTaskEdit />} />
 						<Route exact path="/profiles/:id" render={() => <ProfilePage />} />
 						<Route exact path='/profile/:id/edit' render={() => <ProfileEdit />} />
+						<Route exact path='/profile/:id/changepassword' render={() => <UserpasswordForm />} />
+						<Route exact path='/profile/:id/changename' render={() => <UsernameForm />} />
 						<Route render={()=> <NotFound />} />
 					</Switch>
 				</Container>
