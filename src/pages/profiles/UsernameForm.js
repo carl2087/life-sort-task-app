@@ -9,8 +9,11 @@ import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import btnStyles from '../../styles/Button.module.css'
 import styles from '../../styles/Auth.module.css'
+import { useRedirect } from '../../hooks/useRedirect';
 
 const UsernameForm = () => {
+
+    useRedirect('loggedOut');
 
     const [username, setUsername] = useState('');
     const [errors, setErrors] = useState({});
