@@ -1,5 +1,5 @@
-import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import axios from 'axios';
+import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { axiosRequest, axiosResponse } from '../api/axiosDefaults';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { removeTokenTimestamp, shouldRefreshToken } from '../utils/utils';
