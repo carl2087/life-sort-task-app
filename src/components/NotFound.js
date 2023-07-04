@@ -9,7 +9,7 @@ const NotFound = () => {
     return (
         <Row className={`justify-content-center align-items-center ${styles.NotFound}`}>
             <Col className='col-12 col-md-5'>
-                <Image src={NotFoundImage} fluid></Image>
+                <Image src={NotFoundImage} fluid alt='Four cartoon people with question marks above their heads'></Image>
             </Col>
             <Col className='col-12 text-center'>
                 <p>Sorry the page you are looking for does not exist.</p>
