@@ -7,6 +7,7 @@ const SignUpImage = () => {
         <Image
             src={image}
             fluid
+            alt='cartoon woman typing on a large phone'
         />
     )
 }
