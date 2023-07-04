@@ -31,7 +31,7 @@ const QuickTaskPage = () => {
     return (
         <Row className='h-100'>
             <Col className='col-6 offset-3'>
-                <h1 className={`${styles.TaskPageTitle} text-center`}>Quick Task: {id}</h1>
+                <h1 className={`${styles.TaskPageTitle} text-center`}>Quick Task</h1>
                 <DetailedQuickTask {...quickTask.results[0]} setQuickTask={setQuickTask} quickTaskPage />
             </Col>
         </Row>

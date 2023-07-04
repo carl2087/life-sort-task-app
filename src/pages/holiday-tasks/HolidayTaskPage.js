@@ -31,7 +31,7 @@ const HolidayTaskPage = () => {
     return (
         <Row className='h-100'>
             <Col className='col-6 offset-3'>
-                <h1 className={`${styles.TaskPageTitle} text-center`}>Holiday Task: {id}</h1>
+                <h1 className={`${styles.TaskPageTitle} text-center`}>Holiday Task</h1>
                 <DetailedHolidayTask {...holidayTask.results[0]} setHolidayTask={setHolidayTask} holidayTaskPage />
             </Col>
         </Row>

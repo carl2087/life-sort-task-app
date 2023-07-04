@@ -32,7 +32,7 @@ const CustomTaskPage = () => {
     return (
         <Row className='h-100'>
             <Col className='col-6 offset-3'>
-                <h1 className={`${styles.TaskPageTitle} text-center`}>Custom Task: {id}</h1>
+                <h1 className={`${styles.TaskPageTitle} text-center`}>Custom Task</h1>
                 <DetailedCustomTask {...customTask.results[0]} setCustomTask={setCustomTask} customTaskPage />
             </Col>
         </Row>
