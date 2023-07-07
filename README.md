@@ -87,3 +87,81 @@ Logged in mobile:
 ![landing page logged in user mobile](src/assets/readme/wireframes/landing-page-logged-in-mobile.png)
 
 ##### Dashboard
+
+For the dashboard I wanted this to be where a user of the site could view all of their tasks on one page and have infinite scroll so all the tasks keep loading. For smaller devices I changed the view to show buttons instead to links to each tasks list page as to avoid a super long list with different tasks on it.
+
+Dashboard desktop:
+
+![dashboard on a deskptop](src/assets/readme/wireframes/my-dashboard-page-desktop.png)
+
+Dashboard tablet:
+
+![dashboard on a tablet](src/assets/readme/wireframes/my-dashboard-page-tablet.png)
+
+Dashboard mobile:
+
+![dashboard on a mobile](src/assets/readme/wireframes/my-dashboard-page-mobile.png)
+
+##### Individual task page
+
+When clicking on a title of a task you are taken to the invidual task page for that particular task.
+
+Individual task page desktop:
+
+![task page on a desktop](src/assets/readme/wireframes/individual-task-list-pages-desktop.png)
+
+Individual task page tablet:
+
+![task page on a tablet](src/assets/readme/wireframes/individual-task-list-page-tablet.png)
+
+Individual task page mobile:
+
+![task page on a mobile](src/assets/readme/wireframes/individual-task-list-page-mobile.png)
+
+##### Create a task and edit a task
+
+The layout for creating a task and editing a task is the same so they have one wireframe for both.
+
+Desktop:
+
+![create a task deskptop](src/assets/readme/wireframes/create-a-task-desktop.png)
+
+Tablet:
+
+![create a task tablet](src/assets/readme/wireframes/create-a-task-tablet.png)
+
+Mobile:
+
+![create a task mobile](src/assets/readme/wireframes/create-a-task-mobile.png)
+
+##### Profile page
+
+I wanted users of the site to have access to their own profile page within the site so they can update profile image and bio and have access to their tasks from here as well.
+
+Profile page desktop:
+
+![profile page desktop](src/assets/readme/wireframes/profile-page-desktop.png)
+
+Profile page tablet:
+
+![profile page tablet](src/assets/readme/wireframes/profile-page-tablet.png)
+
+Profile page mobile:
+
+![profile page mobile](src/assets/readme/wireframes/profile-page-mobile.png)
+
+##### Sign up and login pages
+
+The sign up and log in pages are the same design as well so they are shown below.
+
+Desktop:
+
+![Sign up page desktop](src/assets/readme/wireframes/sign-in-page-desktop.png)
+
+Tablet:
+
+![sign up page tablet](src/assets/readme/wireframes/sign-in-page-tablet.png)
+
+Mobile:
+
+![sign up page mobile](src/assets/readme/wireframes/sign-in-page-mobile.png)
