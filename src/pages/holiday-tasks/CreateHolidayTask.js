@@ -115,7 +115,7 @@ const CreateHolidayTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Form.Group className="mb-3" controlId="description">
                     <Form.Label >Description of holiday</Form.Label>
@@ -133,8 +133,7 @@ const CreateHolidayTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
-
+                ))}
 
                 <Form.Group className="mb-3" controlId="date_of_holiday">
                     <Form.Label >Holiday date</Form.Label>
@@ -150,8 +149,7 @@ const CreateHolidayTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
-
+                ))}
 
                 <Form.Group className="mb-3 form-check-inline" controlId="entertainment">
                     <Form.Check
@@ -167,7 +165,7 @@ const CreateHolidayTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Form.Group className="mb-3 form-check-inline" controlId="tickets">
                     <Form.Check
@@ -183,7 +181,7 @@ const CreateHolidayTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Form.Group className="mb-3 form-check-inline" controlId="car_hire">
                     <Form.Check
@@ -199,7 +197,7 @@ const CreateHolidayTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Form.Group className="mb-3 form-check-inline" controlId="holiday_paid_in_full">
                     <Form.Check
@@ -215,7 +213,7 @@ const CreateHolidayTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Form.Group className="mb-3 form-check-inline" controlId="suitcases_packed">
                     <Form.Check
@@ -231,7 +229,7 @@ const CreateHolidayTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Form.Group className="mb-3 form-check-inline" controlId="holiday_insurance">
                     <Form.Check
@@ -247,7 +245,7 @@ const CreateHolidayTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Form.Group className="mb-3 form-check-inline" controlId="passport">
                     <Form.Check
@@ -263,7 +261,7 @@ const CreateHolidayTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Form.Group className="mb-3 form-check-inline" controlId="clothes">
                     <Form.Check
@@ -279,7 +277,7 @@ const CreateHolidayTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Form.Group className="mb-3" controlId="budget">
                     <Form.Label>
@@ -297,7 +295,7 @@ const CreateHolidayTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Form.Group className="mb-3" controlId="completed_state">
                     <Form.Label >Task Completed?</Form.Label>
@@ -317,7 +315,7 @@ const CreateHolidayTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Row>
                     <Col className="xs-12 text-center">
@@ -341,7 +339,7 @@ const CreateHolidayTask = () => {
                 <Alert key={idx} className="mt-3" variant="danger">
                     {message}
                 </Alert>
-        )};
+        )}
             </Form>
         </Col>
     </Row>

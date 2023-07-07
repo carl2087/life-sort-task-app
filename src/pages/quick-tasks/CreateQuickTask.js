@@ -59,7 +59,7 @@ const CreateQuickTask = () => {
                 setErrors(error.response.data)
             }
         }
-    }
+    };
 
     return (
         <Row className='align-items-center justify-content-center'>
@@ -81,7 +81,7 @@ const CreateQuickTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Form.Group className="mb-3" controlId="description">
                     <Form.Label >Description of task</Form.Label>
@@ -99,7 +99,7 @@ const CreateQuickTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Form.Group className="mb-3" controlId="due_date">
                     <Form.Label >Due date</Form.Label>
@@ -115,7 +115,7 @@ const CreateQuickTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Form.Group className="mb-3" controlId="priority_state">
                     <Form.Label >Priority</Form.Label>
@@ -135,7 +135,7 @@ const CreateQuickTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Form.Group className="mb-3" controlId="completed_state">
                     <Form.Label >Task Completed?</Form.Label>
@@ -155,7 +155,7 @@ const CreateQuickTask = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))};
+                ))}
 
                 <Row>
                     <Col className="xs-12 text-center">
