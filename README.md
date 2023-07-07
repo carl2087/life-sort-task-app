@@ -316,3 +316,8 @@ If a user of the site attempts to navigate to a page that does not exist then th
  * A search bar to enable searching through tasks to find the exact task you want.
  * A version of the application which is built for mobiles.
  * A family version of the tasks app so a nominated family leader could set tasks for the household for example.
+ * A contact form so users can leave feedback.
+
+## Testing
+
+I manually tested the application which is fully documented [HERE](MANUALTESTS.md). To the best of my knowledge all the features of the site work as expected.
