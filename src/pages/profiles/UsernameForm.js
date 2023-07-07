@@ -44,7 +44,6 @@ const UsernameForm = () => {
             }));
             history.goBack();
         } catch (error) {
-            console.log(error)
             setErrors(error.response?.data);
         }
     };

@@ -114,6 +114,7 @@ const HolidayTaskEdit = () => {
                 }
                 else { history.push('/') }
             } catch (error) {
+                // console.log(error)
             }
         }
         handleMount();

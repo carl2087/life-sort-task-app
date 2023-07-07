@@ -23,6 +23,7 @@ const HolidayTaskPage = () => {
                 ])
                 setHolidayTask({results: [holidayTask]})
             } catch (error) {
+                // console.log(error)
             }
         }
         handleMount();

@@ -23,6 +23,7 @@ const QuickTaskPage = () => {
                 ])
                 setQuickTask({results: [quickTask]})
             } catch (error) {
+                // console.log(error)
             }
         }
         handleMount();

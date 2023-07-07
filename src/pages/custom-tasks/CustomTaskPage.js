@@ -23,6 +23,7 @@ const CustomTaskPage = () => {
                 ])
                 setCustomTask({results: [customTask]})
             } catch (error) {
+                // console.log(error)
             }
         }
         handleMount()

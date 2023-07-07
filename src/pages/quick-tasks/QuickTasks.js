@@ -32,7 +32,8 @@ const QuickTasks = () => {
                 });
                 setQuickTasks(data)
                 setHasLoaded(true)
-            } catch (error) {
+            } catch (error)  {
+                // console.log(error)
             }
         }
         setHasLoaded(false);

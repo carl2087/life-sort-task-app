@@ -37,6 +37,7 @@ const ProfilePage = () => {
                     setProfileData({name, owner, image, content});
                     setHasLoaded(true)
                 } catch (error) {
+                    // console.log(error)
                 }
             } else {
                 history.push('/')

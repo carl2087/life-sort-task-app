@@ -33,6 +33,7 @@ const Customtasks = () => {
                 setCustomTasks(data)
                 setHasLoaded(true)
             } catch (error) {
+                // console.log(error)
             }
         }
         setHasLoaded(false)
