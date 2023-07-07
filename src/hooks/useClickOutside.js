@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react';
 
 const useClickOutside = () => {
     const [expanded, setExpanded] = useState(false);
@@ -19,4 +19,4 @@ const useClickOutside = () => {
     return { expanded, setExpanded, ref }
 }
 
-export default useClickOutside
+export default useClickOutside;

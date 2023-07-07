@@ -1,4 +1,4 @@
-import React  from 'react'
+import React  from 'react';
 import { useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -111,7 +111,7 @@ const LogInForm = () => {
                 </Form>
         </Col>
     </Row>
-    )
-}
+    );
+};
 
-export default LogInForm
+export default LogInForm;

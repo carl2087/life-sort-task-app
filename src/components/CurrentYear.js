@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const CurrentYear = () => {
 
@@ -11,4 +11,4 @@ const CurrentYear = () => {
     )
 }
 
-export default CurrentYear
+export default CurrentYear;

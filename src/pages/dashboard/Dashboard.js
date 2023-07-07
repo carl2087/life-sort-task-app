@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Customtasks from '../custom-tasks/Customtasks';
 import Row  from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -49,7 +49,7 @@ const Dashboard = () => {
                     </Link>
                 </Col>
             </Row>
-    )
+    );
 }
 
-export default Dashboard
+export default Dashboard;

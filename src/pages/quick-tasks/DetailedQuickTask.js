@@ -1,12 +1,12 @@
-import React from 'react'
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
+import React from 'react';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosRequest } from '../../api/axiosDefaults';
 import Modal from 'react-bootstrap/Modal';
 import btnStyles from '../../styles/Button.module.css'
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
-import styles from '../../styles/TaskDetail.module.css'
+import styles from '../../styles/TaskDetail.module.css';
 import Col from 'react-bootstrap/Col';
 import { useRedirect } from '../../hooks/useRedirect';
 
@@ -35,11 +35,11 @@ const DetailedQuickTask = (props) => {
         } catch (error) {
             // console.log(error)
         }
-    }
+    };
 
     const handleEdit = () => {
         history.push(`/quicktask/${id}/edit`)
-    }
+    };
 
     const [show, setShow] = useState(false);
 
@@ -89,7 +89,7 @@ const DetailedQuickTask = (props) => {
         </Modal>
         </>
         </Col>
-    )
+    );
 }
 
-export default DetailedQuickTask
+export default DetailedQuickTask;

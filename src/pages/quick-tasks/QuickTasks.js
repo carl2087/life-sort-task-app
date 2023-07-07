@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosRequest } from '../../api/axiosDefaults';
-import styles from '../../App.module.css'
+import styles from '../../App.module.css';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import DetailedQuickTask from './DetailedQuickTask';
 import Asset from '../../components/Asset';
@@ -9,7 +9,7 @@ import { fetchMoreData } from '../../utils/utils';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import NoResults from '../../assets/magnifying-glass.svg'
+import NoResults from '../../assets/magnifying-glass.svg';
 import { useRedirect } from '../../hooks/useRedirect';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 
@@ -38,7 +38,7 @@ const QuickTasks = () => {
         }
         setHasLoaded(false);
         fetchQuickTasks();
-    }, [pathname, currentUser])
+    }, [pathname, currentUser]);
 
 
     return (
@@ -80,4 +80,4 @@ const QuickTasks = () => {
     )
 }
 
-export default QuickTasks
+export default QuickTasks;

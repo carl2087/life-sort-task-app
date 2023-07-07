@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from "react-bootstrap/Button";
-import styles from '../../styles/CreateTasks.module.css'
+import styles from '../../styles/CreateTasks.module.css';
 import btnStyles from "../../styles/Button.module.css";
 import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosRequest } from '../../api/axiosDefaults';
@@ -25,7 +25,7 @@ const QuickTaskEdit = () => {
         priority_state: 'Low',
         title: '',
         description: '',
-    })
+    });
 
     const {
         due_date,
@@ -65,24 +65,24 @@ const QuickTaskEdit = () => {
             }
         }
         handleMount();
-    }, [history, id])
+    }, [history, id]);
 
     const handleChange = (event) => {
         setTaskData({
             ...taskData,
             [event.target.name]: event.target.value,
         });
-    }
+    };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         const formData = new FormData();
 
-        formData.append('due_date', due_date)
-        formData.append('completed_state', completed_state)
-        formData.append('priority_state', priority_state)
-        formData.append('title', title)
-        formData.append('description', description)
+        formData.append('due_date', due_date);
+        formData.append('completed_state', completed_state);
+        formData.append('priority_state', priority_state);
+        formData.append('title', title);
+        formData.append('description', description);
 
         try {
             await axiosRequest.put(`/quicktask/${id}/`, formData);
@@ -114,7 +114,7 @@ const QuickTaskEdit = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))}
+                ))};
 
                 <Form.Group className="mb-3" controlId="description">
                     <Form.Label >Description of task</Form.Label>
@@ -132,7 +132,7 @@ const QuickTaskEdit = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))}
+                ))};
 
                 <Form.Group className="mb-3" controlId="due_date">
                     <Form.Label >Due date</Form.Label>
@@ -148,7 +148,7 @@ const QuickTaskEdit = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))}
+                ))};
 
                 <Form.Group className="mb-3" controlId="priority_state">
                     <Form.Label >Priority</Form.Label>
@@ -168,7 +168,7 @@ const QuickTaskEdit = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))}
+                ))};
 
                 <Form.Group className="mb-3" controlId="completed_state">
                     <Form.Label >Task Completed?</Form.Label>
@@ -188,7 +188,8 @@ const QuickTaskEdit = () => {
                 <Alert variant="danger" key={idx}>
                     {message}
                     </Alert>
-                ))}
+                ))};
+
                 <Row>
                     <Col className="xs-12 text-center">
                 <Button
@@ -210,11 +211,11 @@ const QuickTaskEdit = () => {
                 <Alert key={idx} className="mt-3" variant="danger">
                     {message}
                 </Alert>
-        )}
+        )};
             </Form>
         </Col>
     </Row>
-    )
+    );
 }
 
-export default QuickTaskEdit
+export default QuickTaskEdit;

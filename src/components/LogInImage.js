@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Image from 'react-bootstrap/Image';
-import loginImage from '../assets/log-in-image.png'
+import loginImage from '../assets/log-in-image.png';
 
 const LogInImage = () => {
     return (
@@ -12,4 +12,4 @@ const LogInImage = () => {
     )
 }
 
-export default LogInImage
+export default LogInImage;

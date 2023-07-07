@@ -1,8 +1,8 @@
-import React from 'react'
-import styles from '../../styles/TaskDetail.module.css'
+import React from 'react';
+import styles from '../../styles/TaskDetail.module.css';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import btnStyles from '../../styles/Button.module.css'
+import btnStyles from '../../styles/Button.module.css';
 import { axiosRequest } from '../../api/axiosDefaults';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
@@ -40,11 +40,11 @@ const DetailedCustomTask = (props) => {
         } catch (error) {
             // console.log(error)
         }
-    }
+    };
 
     const handleEdit = () => {
         history.push(`/customtask/${id}/edit`)
-    }
+    };
 
     const [show, setShow] = useState(false);
 
@@ -97,7 +97,7 @@ const DetailedCustomTask = (props) => {
         </Modal>
         </>
         </Col>
-    )
+    );
 }
 
-export default DetailedCustomTask
+export default DetailedCustomTask;

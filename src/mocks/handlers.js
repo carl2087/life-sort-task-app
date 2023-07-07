@@ -1,4 +1,4 @@
-import { rest } from "msw"
+import { rest } from "msw";
 
 const baseURL = 'https://life-sort-api.herokuapp.com/'
 

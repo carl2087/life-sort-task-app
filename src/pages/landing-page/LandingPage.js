@@ -1,5 +1,5 @@
-import React from 'react'
-import Row from 'react-bootstrap/Row'
+import React from 'react';
+import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HeroImage from '../../components/HeroImage';
 import styles from '../../styles/LandingPage.module.css'
@@ -79,7 +79,7 @@ const LandingPage = () => {
                 {currentUser ? loggedInButtons : loggedOutButtons}
             </Col>
         </Row>
-    )
+    );
 }
 
-export default LandingPage
+export default LandingPage;

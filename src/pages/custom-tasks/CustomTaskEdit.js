@@ -340,7 +340,7 @@ import { useRedirect } from "../../hooks/useRedirect";
 				</Form>
 			</Col>
 		</Row>
-		)
+		);
 	}
 
-	export default CustomTaskEdit
+	export default CustomTaskEdit;

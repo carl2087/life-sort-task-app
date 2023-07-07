@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { useCurrentUser, useSetCurrentUser } from '../../contexts/CurrentUserContext';
 import { axiosResponse } from '../../api/axiosDefaults';
@@ -8,7 +8,7 @@ import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import btnStyles from '../../styles/Button.module.css'
-import styles from '../../styles/Auth.module.css'
+import styles from '../../styles/Auth.module.css';
 import { useRedirect } from '../../hooks/useRedirect';
 
 const UsernameForm = () => {
@@ -30,7 +30,7 @@ const UsernameForm = () => {
         } else {
             history.push('/');
         }
-    }, [currentUser, history, id])
+    }, [currentUser, history, id]);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -82,7 +82,7 @@ const UsernameForm = () => {
             </Form>
         </Col>
     </Row>
-    )
+    );
 }
 
-export default UsernameForm
+export default UsernameForm;

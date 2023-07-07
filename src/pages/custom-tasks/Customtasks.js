@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { axiosRequest } from '../../api/axiosDefaults';
 import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 import DetailedCustomTask from '../custom-tasks/DetailedCustomTask';
@@ -38,7 +38,7 @@ const Customtasks = () => {
         }
         setHasLoaded(false)
         fetchCustomTasks()
-    }, [pathname, currentUser])
+    }, [pathname, currentUser]);
 
     return (
         <div>
@@ -76,7 +76,7 @@ const Customtasks = () => {
                 </Container>
             )}
         </div>
-    )
+    );
 }
 
-export default Customtasks
+export default Customtasks;

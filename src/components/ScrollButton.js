@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { Image } from 'react-bootstrap'
-import image from '../assets/round-line-top-arrow-icon.svg'
-import style from '../styles/ScrollButton.module.css'
+import React, { useState } from 'react';
+import { Image } from 'react-bootstrap';
+import image from '../assets/round-line-top-arrow-icon.svg';
+import style from '../styles/ScrollButton.module.css';
 
 const ScrollButton = () => {
 
@@ -37,4 +37,4 @@ const ScrollButton = () => {
     )
 }
 
-export default ScrollButton
+export default ScrollButton;

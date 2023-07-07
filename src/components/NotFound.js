@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import NotFoundImage from '../assets/404-image.png'
-import styles from '../styles/NotFound.module.css'
+import NotFoundImage from '../assets/404-image.png';
+import styles from '../styles/NotFound.module.css';
 
 const NotFound = () => {
     return (
@@ -18,4 +18,4 @@ const NotFound = () => {
     )
 }
 
-export default NotFound
+export default NotFound;

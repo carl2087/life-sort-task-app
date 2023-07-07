@@ -1,12 +1,12 @@
-import React from 'react'
-import styles from '../styles/Footer.module.css'
+import React from 'react';
+import styles from '../styles/Footer.module.css';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import logo from '../assets/life-sort-logo-words.svg'
-import FbookLogo from '../assets/facebook-square-icon.svg'
-import TwitterLogo from '../assets/twitter-square-icon.svg'
-import YouTubeLogo from '../assets/youtube-square-icon.svg'
-import CurrentYear from './CurrentYear'
+import logo from '../assets/life-sort-logo-words.svg';
+import FbookLogo from '../assets/facebook-square-icon.svg';
+import TwitterLogo from '../assets/twitter-square-icon.svg';
+import YouTubeLogo from '../assets/youtube-square-icon.svg';
+import CurrentYear from './CurrentYear';
 
 const Footer = () => {
     return (
@@ -76,4 +76,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default Footer;

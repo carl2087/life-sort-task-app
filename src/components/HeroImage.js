@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Image from 'react-bootstrap/Image';
-import hero from '../assets/hero-image.png'
+import hero from '../assets/hero-image.png';
 
 const HeroImage = () => {
     return (
@@ -12,4 +12,4 @@ const HeroImage = () => {
     )
 }
 
-export default HeroImage
+export default HeroImage;

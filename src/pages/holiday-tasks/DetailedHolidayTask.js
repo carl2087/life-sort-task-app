@@ -1,10 +1,10 @@
-import React from 'react'
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
+import React from 'react';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosRequest } from '../../api/axiosDefaults';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Col from 'react-bootstrap/Col';
-import styles from '../../styles/TaskDetail.module.css'
+import styles from '../../styles/TaskDetail.module.css';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import Button from 'react-bootstrap/Button';
 import btnStyles from '../../styles/Button.module.css'
@@ -43,11 +43,11 @@ const DetailedHolidayTask = (props) => {
         } catch (error) {
             // console.log(error)
         }
-    }
+    };
 
     const handleEdit = () => {
         history.push(`/holidaytask/${id}/edit`)
-    }
+    };
 
     const [show, setShow] = useState(false);
 
@@ -103,7 +103,7 @@ const DetailedHolidayTask = (props) => {
         </Modal>
         </>
         </Col>
-    )
+    );
 }
 
-export default DetailedHolidayTask
+export default DetailedHolidayTask;

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min'
+import React, { useEffect, useState } from 'react';
+import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { useRedirect } from '../../hooks/useRedirect';
 import { axiosRequest } from '../../api/axiosDefaults';
@@ -8,8 +8,8 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
-import btnStyles from '../../styles/Button.module.css'
-import styles from '../../styles/Auth.module.css'
+import btnStyles from '../../styles/Button.module.css';
+import styles from '../../styles/Auth.module.css';
 
 const UserpasswordForm = () => {
 
@@ -70,7 +70,7 @@ const UserpasswordForm = () => {
                 <Alert key={idx} variant="danger">
                     {message}
                 </Alert>
-            ))}
+            ))};
 
             <Form.Group>
                 <Form.Label>Confirm password</Form.Label>
@@ -87,7 +87,7 @@ const UserpasswordForm = () => {
                 <Alert key={idx} variant="danger">
                     {message}
                 </Alert>
-            ))}
+            ))};
 
             <Button
                 className={`${btnStyles.ButtonStyle}`}
@@ -106,7 +106,7 @@ const UserpasswordForm = () => {
             </Form>
             </Col>
         </Row>
-    )
+    );
 }
 
-export default UserpasswordForm
+export default UserpasswordForm;

@@ -287,7 +287,7 @@ function CreateCustomTask() {
             </Form>
         </Col>
     </Row>
-    )
+    );
 }
 
-export default CreateCustomTask
+export default CreateCustomTask;

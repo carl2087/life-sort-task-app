@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom/cjs/react-router-dom.min'
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { axiosRequest } from '../../api/axiosDefaults';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -27,7 +27,7 @@ const QuickTaskPage = () => {
             }
         }
         handleMount();
-    }, [id])
+    }, [id]);
 
     return (
         <Row className='h-100'>
@@ -39,4 +39,4 @@ const QuickTaskPage = () => {
     )
 }
 
-export default QuickTaskPage
+export default QuickTaskPage;

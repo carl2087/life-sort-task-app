@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -124,4 +124,4 @@ const SignUpForm = () => {
     )
 }
 
-export default SignUpForm
+export default SignUpForm;
