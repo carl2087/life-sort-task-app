@@ -38,7 +38,11 @@ This ReadMe is for the front end section of the application.
 
 Planning for the application was based on an agile methodology utilising GitHubs issues and projects tabs to create user stories for the site. There are user stories which are for the project goals of the site and what I wanted to achieve and I set up project tasks as well which incorporate the what is required for each step of the project.
 
-The user stories requiring implementation to achieve a minimum viable product where then mapped to API endpoints to required to support the desired functionality. 
+The user stories were then worked on in iterations which lasted a week each when each story was started then completed it was moved through the KanBan board into the relevant section.
+
+I also added labels to the user stories consisiting of must-have, should-have and could-have to ensure that the features that had to be included to achieve the project goals were included.
+
+I also added a column for bugs that arose during the making of the application which were documented and the de bugging steps were included also.
 
 [Lifesort Kanban board](https://github.com/users/carl2087/projects/10)
 
@@ -46,9 +50,40 @@ The user stories requiring implementation to achieve a minimum viable product wh
 
 [Lifesort user stories](https://github.com/carl2087/life-sort-task-app/issues)
 
-## Design
+### Design
 
+To decide on the design for the application I started off with wireframes to decide on the general layout of the site to make the wirframes I used [Balsamiq](https://balsamiq.com/wireframes/?gad=1&gclid=Cj0KCQjw756lBhDMARIsAEI0AgkX-3sNRNBsbey5CZvrpsmGPA9oSAXJD_pzaX52fTg1wCV-R2MGPe0aAqU5EALw_wcB). I then utilised [colorhunt](https://colorhunt.co/) to help choose a colour theme. To help speed up building the site I used [React Bootstrap](https://react-bootstrap.netlify.app/). This helped ensure I kept to a mobile first design and help design an application to be used on all devices.
 
+#### Wireframes
 
-### Wireframes
+The wireframes for the site are pictured below.
 
+##### Landing page
+
+When first visiting the site I wanted users to arrive at a landing page with the options to login or sign up if not already. If the user is logged in then be shown links to their dashboard.
+
+Logged out desktop:
+
+![landing page logged out deskptop](src/assets/readme/wireframes/landing-page-desktop-logged-out.png)
+
+Logged in desktop:
+
+![landing page logged in user](src/assets/readme/wireframes/landing-page-desktop-logged-in-user.png)
+
+Logged out tablet:
+
+![landing page logged out user](src/assets/readme/wireframes/landing-page-logged-out-tablet.png)
+
+Logged in tablet:
+
+![landing page logged in user](src/assets/readme/wireframes/landing-page-logged-in-tablet.png)
+
+Logged out mobile:
+
+![landing page logged out user mobile](src/assets/readme/wireframes/landing-page-logged-out-mobile.png)
+
+Logged in mobile:
+
+![landing page logged in user mobile](src/assets/readme/wireframes/landing-page-logged-in-mobile.png)
+
+##### Dashboard
