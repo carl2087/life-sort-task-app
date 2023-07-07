@@ -49,16 +49,17 @@ const QuickTasks = () => {
                 </Link>
                 {quickTasks.results.length ? (
                     <InfiniteScroll
-                    children={
-                        quickTasks.results.map(quickTask => (
-                            <DetailedQuickTask key={quickTask.id} {...quickTask} />
-                        ))
-                    }
                     dataLength={quickTasks.results.length}
                     loader={ <Asset spinner /> }
                     hasMore={ !!quickTasks.next }
                     next={ () => fetchMoreData(quickTasks, setQuickTasks) }
-                    />
+                    >
+                        {
+                        quickTasks.results.map(quickTask => (
+                            <DetailedQuickTask key={quickTask.id} {...quickTask} />
+                        ))
+                        }
+                    </InfiniteScroll>
                 ) : (
                     <Row className={`text-center ${styles.TaskLists} align-items-center`} >
                         <Col className='col-12 '>

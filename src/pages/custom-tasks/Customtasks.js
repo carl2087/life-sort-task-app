@@ -48,16 +48,17 @@ const Customtasks = () => {
                 </Link>
                 {customTasks.results.length ? (
                     <InfiniteScroll
-                    children={
-                        customTasks.results.map(customTask => (
-                            <DetailedCustomTask key={customTask.id} {...customTask} />
-                        ))
-                    }
                     dataLength={customTasks.results.length}
                     loader={<Asset spinner/>}
                     hasMore={!!customTasks.next}
                     next={() => fetchMoreData(customTasks, setCustomTasks)}
-                    />
+                    >
+                        {
+                        customTasks.results.map(customTask => (
+                            <DetailedCustomTask key={customTask.id} {...customTask} />
+                        ))
+                        }
+                    </InfiniteScroll>
                 ) : (
                         <Row className={`text-center ${styles.TaskLists} align-items-center`}>
                             <Col className='col-12'>

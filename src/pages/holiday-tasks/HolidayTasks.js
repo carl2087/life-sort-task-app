@@ -49,16 +49,17 @@ const HolidayTasks = () => {
                 </Link>
                 {holidayTasks.results.length ? (
                     <InfiniteScroll
-                    children={
-                        holidayTasks.results.map(holidayTask => (
-                            <DetailedHolidayTask key={holidayTask.id} {...holidayTask} />
-                        ))
-                    }
                     dataLength={holidayTasks.results.length}
                     loader={<Asset spinner/>}
                     hasMore={!!holidayTasks.next}
                     next={() => fetchMoreData(holidayTasks, setHolidayTasks)}
-                    />
+                    >
+                        {
+                        holidayTasks.results.map(holidayTask => (
+                            <DetailedHolidayTask key={holidayTask.id} {...holidayTask} />
+                        ))
+                    }
+                    </InfiniteScroll>
                 ) : (
                         <Row className={`text-center ${styles.TaskLists} align-items-center`}>
                             <Col className='col-12'>

@@ -86,7 +86,7 @@ import { useRedirect } from "../../hooks/useRedirect";
 					entertainment,
 					});
 				}
-				else { history.push('/')};
+				else { history.push('/')}
 			} catch (error) {
 			}
 		}
