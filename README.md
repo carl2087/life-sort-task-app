@@ -320,4 +320,4 @@ If a user of the site attempts to navigate to a page that does not exist then th
 
 ## Testing
 
-I manually tested the application which is fully documented [HERE](MANUALTESTS.md). To the best of my knowledge all the features of the site work as expected.
+I manually tested the application which is fully documented [HERE](MANUALTESTS.md). The validation testing is also included the folder. To the best of my knowledge all the features of the site work as expected.
