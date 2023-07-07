@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Lifesort
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Lifesort website on different devices](src/assets/readme/lifesort-responsive.png)](https://life-sort.herokuapp.com/)
 
-## Available Scripts
+Lifesort is a task management application, it allows users of the site to sign up and login with their own profile. From there they are able to create tasks: A detailed custom task, a lesser detailed quick task and also holiday tasks.
 
-In the project directory, you can run:
+The custom task option allows the user to create a more detailed task with the ability to create a title, description, set a due date, set a start date among other options as well. The aim for the custom task option is to be able to set a task or an event that would require extra detail such as setting up an event for an annual meeting.
 
-### `npm start`
+The quick task option allows users to create a less detailed task with the ability to create a title, description, priority, due date, and current status of task. The aim for the quick task option is allow users to create a list of normal everyday tasks that would need completing such as mowing the grass.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The holiday task option allows users to create a detailed task list focused on what would be required for a holiday. The aim for the holiday task option is to allow users of the site to organise themselves for a future trip away.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users of the site have full CRUD control over their own tasks with the ability to see their tasks all at once if they are using a desktop computer or in separate lists they can click on a task to see a single task. The user has access to the edit function and delete function throughout these pages. If a user is on a smaller device they have access to all of the tasks created but due to the application having infinite scroll the access is separated out to each individual list of tasks created.
 
-### `npm test`
+Users of the site also have access to their own profile page and have the ability to edit their profile and update their profile image which is displayed in the navigation bar of the application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Lifesort was designed with the focus on an application that can be used on desktop computers but also on mobile devices as well.
 
-### `npm run build`
+Due to the nature of the application I designed it so the profile and task owner has access only to their own data.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Lifesort has a separate front-end built with React and a back-end built with the Django-Rest-Framework. Both of the front-end and back-end have been deployed on [Heroku](https://www.heroku.com/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This ReadMe is for the front end section of the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Deployed front-end site [Lifesort front-end live site](https://life-sort.herokuapp.com/)
+### Deployed back-end API [Lifesort back-end API live site](https://life-sort-api.herokuapp.com/)
 
-### `npm run eject`
+### Back-end repository [Lifesort back-end repository](https://github.com/carl2087/life-sort-drf-api)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project Goals
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ * To create a task application where users can create tasks that vary in detail.
+ * For users of the site to have full CRUD functionality within the tasks that they create.
+ * Deliver a simple and intuitave user experience suitable for a wide range of users.
+ * Offer a minimal set of features chosen in order to deliver a useful application within an achievable development timeframe, whilst laying a solid foundation to add additional features in the future.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Planning
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Planning for the application was based on an agile methodology utilising GitHubs issues and projects tabs to create user stories for the site. There are user stories which are for the project goals of the site and what I wanted to achieve and I set up project tasks as well which incorporate the what is required for each step of the project.
 
-## Learn More
+The user stories requiring implementation to achieve a minimum viable product where then mapped to API endpoints to required to support the desired functionality. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Lifesort Kanban board](https://github.com/users/carl2087/projects/10)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Lifesort project tasks](https://github.com/users/carl2087/projects/11)
 
-### Code Splitting
+[Lifesort user stories](https://github.com/carl2087/life-sort-task-app/issues)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Design
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### Wireframes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
