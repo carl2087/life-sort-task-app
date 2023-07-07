@@ -183,3 +183,130 @@ As mentioned above I used [colorhunt](https://colorhunt.co/) to generate the col
 For the site I decided on using one font which is sourced from the [Google Fonts](https://fonts.google.com/?query=manrope) library and the one used in the site is Manrope. I decided on this font as it nice and clear and a simple font that keeps in with the theming of the site.
 
 ![Manrope font](src/assets/readme/google-font-selection.png)
+
+## Features
+
+Below are the current features of the site. All of the images I used in the site are fully attributed in the attributions section of this ReadMe.
+
+### Navbar
+
+The navbar is fully reponsive and appears differently depending on the logged in status of the user.
+
+Logged in navbar desktop:
+
+![navbar logged in deskptop](src/assets/readme/features/logged-in-navbar.png)
+
+Logged out navbar desktop:
+
+![navbar logged out desktop](src/assets/readme/features/logged-out-navbar.png)
+
+Logged in navbar smaller devices:
+
+![logged in navbar smaller devices](src/assets/readme/features/navbar-smaller-device.png)
+
+Logged out navbar smaller devices:
+
+![logged out navbar smaller devices](src/assets/readme/features/logged-out-smaller-device.png)
+
+### Navbar dropdown menu
+
+The Navbar drowdown menu is available on all screen sizes and has links to create a task in each category.
+
+Navbar dropdown menu:
+
+![navbar dropdown menu](src/assets/readme/features/task-dropdown-nav.png)
+
+### Footer
+
+The footer is fully responsive and has the Lifesort logo as well as links to social media sites which when clicked open in new tabs.
+
+Footer on desktop:
+
+![footer on a desktop](src/assets/readme/features/footer.png)
+
+Footer on smaller devices:
+
+![footer on smaller devices](src/assets/readme/features/footer-smaller-device.png)
+
+### Landing page 
+
+The landing page is fully responsive and is different depending on the logged in status of the user. It also has an about section for the application.
+
+
+Landing page desktop logged in:
+
+![Landing page logged in](src/assets/readme/features/logged-in-landing-screen.png)
+
+Landing page desktop not logged in:
+
+![landing page non logged in](src/assets/readme/features/non-logged-in-landing-screen.png)
+
+Landing page desktop smaller devices:
+
+![landing page on smaller devices](src/assets/readme/features/landing-screen-smaller-device.png)
+
+### Dashboard
+
+The dashboard is where a user has all their tasks listed if they are on a desktop and if they are on a smaller device they are shown buttons that link to the tasks list page for each task category.
+
+Dashboard page desktop:
+
+![dashboard on desktop](src/assets/readme/features/dashboard.png)
+
+Dashboard page smaller devices:
+
+![dashboard on smaller devices](src/assets/readme/features/dashboard-smaller-device.png)
+
+### Creating and editing a task
+
+The create a task page is the same layout for each category of task so I have included one image below. The layout is the same for editing a task as well accept that it will pre-load of the existing task data.
+
+![Create a task](src/assets/readme/features/create-holiday-task.png)
+
+### Task detail page
+
+The task detail page/component is shown throughout the application and shows the data entered for the task and it also gives user feedback if the task is overdue or on time.
+
+![task detail](src/assets/readme/features/holiday-task-page.png)
+
+### Profile page
+
+The profile page has links to change password and username shows the current profile image which can be updated and bio description as well.
+
+![Profile page](src/assets/readme/features/profile-page.png)
+
+### Sign up and log in pages
+
+The sign up and log in pages have largely the same design but feature different images.
+
+Sign up page:
+
+![Sign up page](src/assets/readme/features/signup-page.png)
+
+Log in page:
+
+![log in page](src/assets/readme/features/login-page.png)
+
+### No task found image
+
+On each page that a user can view a list of tasks if a task has not been created in that category then the user is shown a no task found graphic.
+
+No task found image:
+
+![no task found image](src/assets/readme/features/no-task-found.png)
+
+### Back to top button
+
+Due to the application having infinite scroll I added a back to top button for an ease of life improvement.
+
+Back to top button:
+
+![back to top button](src/assets/readme/features/back-to-top-button.png)
+
+### 404 Page
+
+If a user of the site attempts to navigate to a page that does not exist then they are shown a customised 404 page.
+
+404 page:
+
+![404 page](src/assets/readme/features/404-page.png)
