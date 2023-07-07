@@ -310,3 +310,9 @@ If a user of the site attempts to navigate to a page that does not exist then th
 404 page:
 
 ![404 page](src/assets/readme/features/404-page.png)
+
+### Future features
+
+ * A search bar to enable searching through tasks to find the exact task you want.
+ * A version of the application which is built for mobiles.
+ * A family version of the tasks app so a nominated family leader could set tasks for the household for example.
