@@ -1,6 +1,9 @@
 {
   "name": "life-sort-task-app",
   "version": "0.1.0",
+  "engines": {
+    "node": "18.16.0"
+  },
   "private": true,
   "dependencies": {
     "@babel/core": "^7.22.5",
