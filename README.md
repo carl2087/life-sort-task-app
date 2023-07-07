@@ -31,7 +31,7 @@ This ReadMe is for the front end section of the application.
 
  * To create a task application where users can create tasks that vary in detail.
  * For users of the site to have full CRUD functionality within the tasks that they create.
- * Deliver a simple and intuitave user experience suitable for a wide range of users.
+ * Deliver a simple and intuitive user experience suitable for a wide range of users.
  * Offer a minimal set of features chosen in order to deliver a useful application within an achievable development timeframe, whilst laying a solid foundation to add additional features in the future.
 
 ## Planning
@@ -40,7 +40,7 @@ Planning for the application was based on an agile methodology utilising GitHubs
 
 The user stories were then worked on in iterations which lasted a week each when each story was started then completed it was moved through the KanBan board into the relevant section.
 
-I also added labels to the user stories consisiting of must-have, should-have and could-have to ensure that the features that had to be included to achieve the project goals were included.
+I also added labels to the user stories consisting of must-have, should-have and could-have to ensure that the features that had to be included to achieve the project goals were included.
 
 I also added a column for bugs that arose during the making of the application which were documented and the de bugging steps were included also.
 
@@ -52,7 +52,7 @@ I also added a column for bugs that arose during the making of the application w
 
 ### Design
 
-To decide on the design for the application I started off with wireframes to decide on the general layout of the site to make the wirframes I used [Balsamiq](https://balsamiq.com/wireframes/?gad=1&gclid=Cj0KCQjw756lBhDMARIsAEI0AgkX-3sNRNBsbey5CZvrpsmGPA9oSAXJD_pzaX52fTg1wCV-R2MGPe0aAqU5EALw_wcB). I then utilised [colorhunt](https://colorhunt.co/) to help choose a colour theme. To help speed up building the site I used [React Bootstrap](https://react-bootstrap.netlify.app/). This helped ensure I kept to a mobile first design and help design an application to be used on all devices.
+To decide on the design for the application I started off with wireframes to decide on the general layout of the site to make the wireframes I used [Balsamiq](https://balsamiq.com/wireframes/?gad=1&gclid=Cj0KCQjw756lBhDMARIsAEI0AgkX-3sNRNBsbey5CZvrpsmGPA9oSAXJD_pzaX52fTg1wCV-R2MGPe0aAqU5EALw_wcB). I then utilised [colorhunt](https://colorhunt.co/) to help choose a colour theme. To help speed up building the site I used [React Bootstrap](https://react-bootstrap.netlify.app/). This helped ensure I kept to a mobile first design and help design an application to be used on all devices.
 
 #### Wireframes
 
@@ -64,7 +64,7 @@ When first visiting the site I wanted users to arrive at a landing page with the
 
 Logged out desktop:
 
-![landing page logged out deskptop](src/assets/readme/wireframes/landing-page-desktop-logged-out.png)
+![landing page logged out desktop](src/assets/readme/wireframes/landing-page-desktop-logged-out.png)
 
 Logged in desktop:
 
@@ -92,7 +92,7 @@ For the dashboard I wanted this to be where a user of the site could view all of
 
 Dashboard desktop:
 
-![dashboard on a deskptop](src/assets/readme/wireframes/my-dashboard-page-desktop.png)
+![dashboard on a desktop](src/assets/readme/wireframes/my-dashboard-page-desktop.png)
 
 Dashboard tablet:
 
@@ -104,7 +104,7 @@ Dashboard mobile:
 
 ##### Individual task page
 
-When clicking on a title of a task you are taken to the invidual task page for that particular task.
+When clicking on a title of a task you are taken to the individual task page for that particular task.
 
 Individual task page desktop:
 
@@ -124,7 +124,7 @@ The layout for creating a task and editing a task is the same so they have one w
 
 Desktop:
 
-![create a task deskptop](src/assets/readme/wireframes/create-a-task-desktop.png)
+![create a task desktop](src/assets/readme/wireframes/create-a-task-desktop.png)
 
 Tablet:
 
@@ -165,3 +165,21 @@ Tablet:
 Mobile:
 
 ![sign up page mobile](src/assets/readme/wireframes/sign-in-page-mobile.png)
+
+#### Database schema 
+
+The database schema has been uploaded to the back-end ReadMe and can be found [HERE](https://github.com/carl2087/life-sort-drf-api).
+
+#### Colour scheme.
+
+As mentioned above I used [colorhunt](https://colorhunt.co/) to generate the colour scheme for the site I decided on this colour scheme as it is a clean colour palette and not overly bright.
+
+![colour palette](src/assets/readme/colour-scheme/colour-palatte.png)
+
+![colour palette codes](src/assets/readme/colour-scheme/colour-palatte-codes.png)
+
+#### Typography
+
+For the site I decided on using one font which is sourced from the [Google Fonts](https://fonts.google.com/?query=manrope) library and the one used in the site is Manrope. I decided on this font as it nice and clear and a simple font that keeps in with the theming of the site.
+
+![Manrope font](src/assets/readme/google-font-selection.png)
