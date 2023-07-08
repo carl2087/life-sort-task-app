@@ -319,27 +319,28 @@ const CreateHolidayTask = () => {
 
                 <Row>
                     <Col className="xs-12 text-center">
-                <Button
-                className={`${btnStyles.ButtonStyle}`}
-                type="submit"
-                >
-                    Create holiday task
-                </Button>
+                        {errors.non_field_errors?.map((message, idx) => 
+                            <Alert key={idx} className="mt-3" variant="danger">
+                                {message}
+                            </Alert>
+                        )}
+                        <Button
+                        className={`${btnStyles.ButtonStyle}`}
+                        type="submit"
+                        >
+                            Create holiday task
+                        </Button>
 
-                <Button
-                    className={`${btnStyles.ButtonStyle} `}
-                    onClick={() => history.goBack()}
-                >
-                    Cancel
-                </Button>
-                </Col>
+                        <Button
+                            className={`${btnStyles.ButtonStyle} `}
+                            onClick={() => history.goBack()}
+                        >
+                            Cancel
+                        </Button>
+                    </Col>
                 </Row>
 
-                {errors.non_field_errors?.map((message, idx) => 
-                <Alert key={idx} className="mt-3" variant="danger">
-                    {message}
-                </Alert>
-        )}
+
             </Form>
         </Col>
     </Row>

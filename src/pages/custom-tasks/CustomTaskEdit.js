@@ -317,6 +317,11 @@ import { useRedirect } from "../../hooks/useRedirect";
 
 				<Row>
                     <Col className="xs-12 text-center">
+						{errors.non_field_errors?.map((message, idx) => 
+						<Alert key={idx} className="mt-3" variant="danger">
+							{message}
+						</Alert>
+						)}
 						<Button
 						className={`${btnStyles.ButtonStyle} `}
 						type="submit"
@@ -332,11 +337,6 @@ import { useRedirect } from "../../hooks/useRedirect";
 					</Col>
                 </Row>
 
-					{errors.non_field_errors?.map((message, idx) => 
-					<Alert key={idx} className="mt-3" variant="danger">
-						{message}
-					</Alert>
-			)}
 				</Form>
 			</Col>
 		</Row>

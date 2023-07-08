@@ -264,6 +264,11 @@ function CreateCustomTask() {
                 ))}
                 <Row>
                     <Col className="xs-12 text-center">
+                    {errors.non_field_errors?.map((message, idx) => 
+                <Alert key={idx} className="mt-3" variant="danger">
+                    {message}
+                </Alert>
+                )}
                 <Button
                 className={`${btnStyles.ButtonStyle}`}
                 type="submit"
@@ -279,11 +284,6 @@ function CreateCustomTask() {
                 </Col>
                 </Row>
 
-                {errors.non_field_errors?.map((message, idx) => 
-                <Alert key={idx} className="mt-3" variant="danger">
-                    {message}
-                </Alert>
-        )}
             </Form>
         </Col>
     </Row>
