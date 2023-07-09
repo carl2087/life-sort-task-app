@@ -299,3 +299,7 @@ Quick tasks page score:
 Sign up page score:
 
 ![sign up page score](src/assets/readme/testing-images/lighthouse/lightouse-signup.png)
+
+## WAVE
+
+I have also used [WAVE](https://wave.webaim.org/). On each page within the site with no errors showing on the feedback form.

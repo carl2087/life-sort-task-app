@@ -85,7 +85,7 @@ const ProfileEdit = () => {
 
     const textFields = (
         <>
-        <Form.Group>
+        <Form.Group controlId="content">
             <Form.Label>Bio</Form.Label>
             <Form.Control
             as="textarea"
@@ -121,7 +121,7 @@ const ProfileEdit = () => {
             <Form.Group>
                 {image && (
                 <figure>
-                    <Image className={styles.ProfileImage} src={image} fluid />
+                    <Image className={styles.ProfileImage} src={image} alt="Profile image of current profile" fluid />
                 </figure>
                 )}
                 {errors?.image?.map((message, idx) => (
