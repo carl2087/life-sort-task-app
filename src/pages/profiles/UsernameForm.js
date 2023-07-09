@@ -52,12 +52,13 @@ const UsernameForm = () => {
         <Row className={`justify-content-center ${styles.AuthForms}`}>
             <Col className='col-12 col-md-7'>
             <Form>
-            <Form.Group>
+            <Form.Group controlId='username'>
                 <Form.Label>Change username</Form.Label>
                 <Form.Control
                 placeholder="username"
                 type="text"
                 value={username}
+                name='username'
                 onChange={(event) => setUsername(event.target.value)}
                 />
             </Form.Group>
