@@ -27,6 +27,52 @@ This ReadMe is for the front end section of the application.
 
 ### Back-end repository [Lifesort back-end repository](https://github.com/carl2087/life-sort-drf-api)
 
+- [Lifesort](#lifesort)
+  * [Project Goals](#project-goals)
+  * [Planning](#planning)
+    + [Design](#design)
+      - [Wireframes](#wireframes)
+        * [Landing page](#landing-page)
+        * [Dashboard](#dashboard)
+        * [Individual task page](#individual-task-page)
+        * [Create a task and edit a task](#create-a-task-and-edit-a-task)
+        * [Profile page](#profile-page)
+        * [Sign up and login pages](#sign-up-and-login-pages)
+      - [Database schema](#database-schema)
+      - [Colour scheme.](#colour-scheme)
+      - [Typography](#typography)
+  * [Features](#features)
+    + [Navbar](#navbar)
+    + [Navbar dropdown menu](#navbar-dropdown-menu)
+    + [Footer](#footer)
+    + [Landing page](#landing-page-1)
+    + [Dashboard](#dashboard-1)
+    + [Creating and editing a task](#creating-and-editing-a-task)
+    + [Task detail page](#task-detail-page)
+    + [Profile page](#profile-page-1)
+    + [Sign up and log in pages](#sign-up-and-log-in-pages)
+    + [No task found image](#no-task-found-image)
+    + [Back to top button](#back-to-top-button)
+    + [404 Page](#404-page)
+    + [Future features](#future-features)
+  * [Testing](#testing)
+  * [Bugs](#bugs)
+    + [Project would not deploy to Heroku after installing ESLint](#project-would-not-deploy-to-heroku-after-installing-eslint)
+    + [Project would not deploy to Heroku at beginning of project.](#project-would-not-deploy-to-heroku-at-beginning-of-project)
+    + [During manual testing could not always see the error feedback](#during-manual-testing-could-not-always-see-the-error-feedback)
+  * [Technologies used](#technologies-used)
+    + [Main languages used](#main-languages-used)
+    + [Frameworks, Libraries & Programs Used](#frameworks--libraries---programs-used)
+  * [Deployment](#deployment)
+    + [Forking/ Cloning](#forking--cloning)
+    + [Deployment for Gitpod](#deployment-for-gitpod)
+    + [Deployment to Heroku](#deployment-to-heroku)
+  * [Credits](#credits)
+  * [Acknowledgements](#acknowledgements)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 ## Project Goals
 
  * To create a task application where users can create tasks that vary in detail.
@@ -49,6 +95,8 @@ I also added a column for bugs that arose during the making of the application w
 [Lifesort project tasks](https://github.com/users/carl2087/projects/11)
 
 [Lifesort user stories](https://github.com/carl2087/life-sort-task-app/issues)
+
+[Back to top](#table-of-contents)
 
 ### Design
 
@@ -86,6 +134,8 @@ Logged in mobile:
 
 ![landing page logged in user mobile](src/assets/readme/wireframes/landing-page-logged-in-mobile.png)
 
+[Back to top](#table-of-contents)
+
 ##### Dashboard
 
 For the dashboard I wanted this to be where a user of the site could view all of their tasks on one page and have infinite scroll so all the tasks keep loading. For smaller devices I changed the view to show buttons instead to links to each tasks list page as to avoid a super long list with different tasks on it.
@@ -101,6 +151,8 @@ Dashboard tablet:
 Dashboard mobile:
 
 ![dashboard on a mobile](src/assets/readme/wireframes/my-dashboard-page-mobile.png)
+
+[Back to top](#table-of-contents)
 
 ##### Individual task page
 
@@ -118,6 +170,8 @@ Individual task page mobile:
 
 ![task page on a mobile](src/assets/readme/wireframes/individual-task-list-page-mobile.png)
 
+[Back to top](#table-of-contents)
+
 ##### Create a task and edit a task
 
 The layout for creating a task and editing a task is the same so they have one wireframe for both.
@@ -133,6 +187,8 @@ Tablet:
 Mobile:
 
 ![create a task mobile](src/assets/readme/wireframes/create-a-task-mobile.png)
+
+[Back to top](#table-of-contents)
 
 ##### Profile page
 
@@ -150,6 +206,8 @@ Profile page mobile:
 
 ![profile page mobile](src/assets/readme/wireframes/profile-page-mobile.png)
 
+[Back to top](#table-of-contents)
+
 ##### Sign up and login pages
 
 The sign up and log in pages are the same design as well so they are shown below.
@@ -165,6 +223,8 @@ Tablet:
 Mobile:
 
 ![sign up page mobile](src/assets/readme/wireframes/sign-in-page-mobile.png)
+
+[Back to top](#table-of-contents)
 
 #### Database schema 
 
@@ -183,6 +243,8 @@ As mentioned above I used [colorhunt](https://colorhunt.co/) to generate the col
 For the site I decided on using one font which is sourced from the [Google Fonts](https://fonts.google.com/?query=manrope) library and the one used in the site is Manrope. I decided on this font as it nice and clear and a simple font that keeps in with the theming of the site.
 
 ![Manrope font](src/assets/readme/google-font-selection.png)
+
+[Back to top](#table-of-contents)
 
 ## Features
 
@@ -207,6 +269,8 @@ Logged in navbar smaller devices:
 Logged out navbar smaller devices:
 
 ![logged out navbar smaller devices](src/assets/readme/features/logged-out-smaller-device.png)
+
+[Back to top](#table-of-contents)
 
 ### Navbar dropdown menu
 
@@ -245,6 +309,8 @@ Landing page desktop smaller devices:
 
 ![landing page on smaller devices](src/assets/readme/features/landing-screen-smaller-device.png)
 
+[Back to top](#table-of-contents)
+
 ### Dashboard
 
 The dashboard is where a user has all their tasks listed if they are on a desktop and if they are on a smaller device they are shown buttons that link to the tasks list page for each task category.
@@ -262,6 +328,8 @@ Dashboard page smaller devices:
 The create a task page is the same layout for each category of task so I have included one image below. The layout is the same for editing a task as well accept that it will pre-load of the existing task data.
 
 ![Create a task](src/assets/readme/features/create-holiday-task.png)
+
+[Back to top](#table-of-contents)
 
 ### Task detail page
 
@@ -286,6 +354,8 @@ Sign up page:
 Log in page:
 
 ![log in page](src/assets/readme/features/login-page.png)
+
+[Back to top](#table-of-contents)
 
 ### No task found image
 
@@ -318,6 +388,8 @@ If a user of the site attempts to navigate to a page that does not exist then th
  * A family version of the tasks app so a nominated family leader could set tasks for the household for example.
  * A contact form so users can leave feedback.
 
+ [Back to top](#table-of-contents)
+
 ## Testing
 
 I manually tested the application which is fully documented [HERE](MANUALTESTS.md). The validation testing is also included the folder. To the best of my knowledge all the features of the site work as expected.
@@ -339,6 +411,8 @@ I was receiving an error that was only showing in the Heroku build logs and not 
 Whilst manually testing the application I could not always see the error feedback for the non field errors as it sometimes could appear below the visible screen at the bottom of the form. To fix this and create a better user experience I moved the error feedback to above the submit button which ensured the feedback would always be on the visible screen.
 
 To the best of my knowledge there are no further bugs left in the application.
+
+[Back to top](#table-of-contents)
 
 ## Technologies used
 
@@ -370,9 +444,11 @@ Back-end and front-end are included
  * React Router : Uses for the navigation of Lifesort.
  * ESLint : For linting and JSX validation.
 
+ [Back to top](#table-of-contents)
+
 ## Deployment
 
-### Forking/ Cloning
+### Forking / Cloning
 
 You can fork the repository with the following steps:
 
@@ -402,6 +478,8 @@ Most of the complicated handling on environment variables happened in the backen
 1. Set the Deployment of the project by clicking on the 'Deploy' tab and choosing the method of deployment.
 1. The application deployed after an initial manual deploy.
 
+[Back to top](#table-of-contents)
+
 ## Credits 
 
  * The Moments walkthrough for which in part this project was based.
@@ -425,4 +503,6 @@ Most of the complicated handling on environment variables happened in the backen
 ## Acknowledgements
 
  [Code Institute](https://codeinstitute.net/) and The Code Institute Slack community where helpful advice is never far away. Also the mentors that helped me throughout the course Victor Miclovich and Martina Terlevic.
+
+ [Back to top](#table-of-contents)
 
