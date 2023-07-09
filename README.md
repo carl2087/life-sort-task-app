@@ -27,6 +27,8 @@ This ReadMe is for the front end section of the application.
 
 ### Back-end repository [Lifesort back-end repository](https://github.com/carl2087/life-sort-drf-api)
 
+## Table of contents
+
 - [Lifesort](#lifesort)
   * [Project Goals](#project-goals)
   * [Planning](#planning)
