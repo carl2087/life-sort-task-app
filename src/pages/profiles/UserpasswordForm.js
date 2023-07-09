@@ -70,7 +70,7 @@ const UserpasswordForm = () => {
                 <Alert key={idx} variant="danger">
                     {message}
                 </Alert>
-            ))};
+            ))}
 
             <Form.Group>
                 <Form.Label>Confirm password</Form.Label>
@@ -87,7 +87,7 @@ const UserpasswordForm = () => {
                 <Alert key={idx} variant="danger">
                     {message}
                 </Alert>
-            ))};
+            ))}
 
             <Button
                 className={`${btnStyles.ButtonStyle}`}
