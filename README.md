@@ -190,11 +190,11 @@ Below are the current features of the site. All of the images I used in the site
 
 ### Navbar
 
-The navbar is fully reponsive and appears differently depending on the logged in status of the user.
+The navbar is fully responsive and appears differently depending on the logged in status of the user.
 
 Logged in navbar desktop:
 
-![navbar logged in deskptop](src/assets/readme/features/logged-in-navbar.png)
+![navbar logged in desktop](src/assets/readme/features/logged-in-navbar.png)
 
 Logged out navbar desktop:
 
@@ -210,7 +210,7 @@ Logged out navbar smaller devices:
 
 ### Navbar dropdown menu
 
-The Navbar drowdown menu is available on all screen sizes and has links to create a task in each category.
+The Navbar dropdown menu is available on all screen sizes and has links to create a task in each category.
 
 Navbar dropdown menu:
 
@@ -332,7 +332,7 @@ The application would not deploy to Heroku after installing ESLint as it kept on
 
 ### Project would not deploy to Heroku at beginning of project.
 
-I was receiving an error that was only showing in the Heroku build logs and not the local DEV enviroment which was Module build failed (from ./node_modules/babel-loader/lib/index.js). To fix the issues I moved the "@babel/plugin-proposal-private-property-in-object": "^7.21.11" to the dependencies list in package.json.
+I was receiving an error that was only showing in the Heroku build logs and not the local DEV environment which was Module build failed (from ./node_modules/babel-loader/lib/index.js). To fix the issues I moved the "@babel/plugin-proposal-private-property-in-object": "^7.21.11" to the dependencies list in package.json.
 
 ### During manual testing could not always see the error feedback
 
@@ -366,3 +366,63 @@ Back-end and front-end are included
  * Excel : To create the database schemas.
  * [Flat Icon](https://www.flaticon.com/) : To add icons to the social links in the footer & navigation sections.
  * Affinity Photo : To create the Lifesort logos.
+ * axios : For API requests.
+ * React Router : Uses for the navigation of Lifesort.
+ * ESLint : For linting and JSX validation.
+
+## Deployment
+
+### Forking/ Cloning
+
+You can fork the repository with the following steps:
+
+1. Login to your GitHub account
+1. Locate the repository you wish to fork
+1. Click the 'Fork' button and you'll have a copy of the repo on your own account.
+
+You can clone the repo with the following steps:
+
+1. Under the 'Code' button in the repository, copy the HTTPS link.
+1. With Git on your local machine, find the directory you want to clone into and set up a Git Bash terminal there.
+1. Type git clone followed by the link to set up the clone on your own system.
+Note: Your own environment will be different from the original so you will need to set up environment variables and install the requirements for it to run.
+
+### Deployment for Gitpod
+
+1. In Heroku, have a CLIENT_ORIGIN_DEV setting for the backend config vars.
+1. In backend settings, change CORS_ALLOWED_ORIGINS_REGEXES to allow for gitpod environment a proper backend database.
+1. In gitpod for the frontend, run npm start in the console and open the port to test the site using a database.
+1. You could alternatively set the database in the backend to run in gitpod by setting a conditional to set it to the inbuilt sqlite database.
+
+### Deployment to Heroku
+
+Most of the complicated handling on environment variables happened in the backend API, so setting up the Lifesort frontend was relatively simple, with most of the calls dealing with separate resources being performed in the code.
+
+1. I logged in and created the app.
+1. Set the Deployment of the project by clicking on the 'Deploy' tab and choosing the method of deployment.
+1. The application deployed after an initial manual deploy.
+
+## Credits 
+
+ * The Moments walkthrough for which in part this project was based.
+ * [CSS Jigsaw validator](https://jigsaw.w3.org/css-validator/) for validation of the CSS.
+ * [Google Fonts](https://fonts.google.com/) for the fonts used.
+ * [Flat Icon](https://www.flaticon.com/) for the icons used on the site.
+ * [Am I Responsive?](https://ui.dev/amiresponsive) for the image used at the top of this README.
+ * [Heroku](https://id.heroku.com/login) for deployment of the final project.
+ * [Favicon.io](https://favicon.io/) for the favicons used on the site.
+ * The scroll to top button code I sourced from [geeks for geeks](https://www.geeksforgeeks.org/how-to-create-a-scroll-to-top-button-in-react-js/). I adjusted what I needed for my uses.
+ * The images used on the site are as follows were used from [Freepik](https://www.freepik.com/) and are listed below. I did edit the pictures to match the colour scheme of the site which is allowed within the free license.
+
+    <a href="https://www.freepik.com/free-vector/computer-login-concept-illustration_20824344.htm#query=sign%20up&position=6&from_view=search&track=ais">Image by storyset</a> on Freepik
+
+    <a href="https://www.freepik.com/free-vector/mobile-login-concept-illustration_4957412.htm#query=sign%20up&position=7&from_view=search&track=ais">Image by storyset</a> on Freepik
+
+    <a href="https://www.freepik.com/free-vector/tiny-people-developers-laptop-customer-requirements-software-requirement-description-user-case-agile-tool-business-analysis-concept-bright-vibrant-violet-isolated-illustration_10782981.htm#query=task%20organise&position=6&from_view=search&track=ais#position=6&query=task%20organise">Image by vectorjuice</a> on Freepik
+
+    Image by <a href="https://www.freepik.com/free-vector/hand-drawn-people-asking-questions-illustration_13297321.htm#query=quation%20mark&position=11&from_view=search&track=ais">Freepik</a>
+
+## Acknowledgements
+
+ [Code Institute](https://codeinstitute.net/) and The Code Institute Slack community where helpful advice is never far away. Also the mentors that helped me throughout the course Victor Miclovich and Martina Terlevic.
+
