@@ -321,3 +321,48 @@ If a user of the site attempts to navigate to a page that does not exist then th
 ## Testing
 
 I manually tested the application which is fully documented [HERE](MANUALTESTS.md). The validation testing is also included the folder. To the best of my knowledge all the features of the site work as expected.
+
+## Bugs
+
+Any bugs encountered during the creation of the application have been logged in the user stories with the debugging steps listed. Below are the bugs encountered.
+
+### Project would not deploy to Heroku after installing ESLint
+
+The application would not deploy to Heroku after installing ESLint as it kept on throwing errors in the terminal for having empty return statements in functions. This was caused by the try catch blocks for requests made from the API for errors being returned. To fix the issue I added in console.logs and commented them out and the application deployed as expected.
+
+### Project would not deploy to Heroku at beginning of project.
+
+I was receiving an error that was only showing in the Heroku build logs and not the local DEV enviroment which was Module build failed (from ./node_modules/babel-loader/lib/index.js). To fix the issues I moved the "@babel/plugin-proposal-private-property-in-object": "^7.21.11" to the dependencies list in package.json.
+
+### During manual testing could not always see the error feedback
+
+Whilst manually testing the application I could not always see the error feedback for the non field errors as it sometimes could appear below the visible screen at the bottom of the form. To fix this and create a better user experience I moved the error feedback to above the submit button which ensured the feedback would always be on the visible screen.
+
+To the best of my knowledge there are no further bugs left in the application.
+
+## Technologies used
+
+### Main languages used
+
+Back-end and front-end are included
+
+ * HTML5
+ * CSS3
+ * JavaScript (specifically the JSX of React)
+ * Python
+ * SQL - Postgres
+
+### Frameworks, Libraries & Programs Used
+
+ * Google Fonts : For the site fonts
+ * GitPod : To build the project & create the JSX & CSS files before pushing the project to Github.
+ * GitHub : To store my repository for submission.
+ * Balsamiq : Was used to create mockups of the project prior to starting.
+ * Am I Responsive? : To ensure the project looked good across all devices.
+ * [Favicon.io](https://favicon.io/) : To provide the code & image for the icon in the tab bar.
+ * Django : Used to build the backend database that serves as an API for the front-end project.
+ * React-Bootstrap : The styling library that has aided to the layout of the site, and which was introduced to us during the course of the program.
+ * ReactJS : To build the components that would collectively form the front-end application.
+ * Excel : To create the database schemas.
+ * [Flat Icon](https://www.flaticon.com/) : To add icons to the social links in the footer & navigation sections.
+ * Affinity Photo : To create the Lifesort logos.
