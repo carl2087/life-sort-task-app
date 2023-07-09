@@ -55,7 +55,7 @@ const UserpasswordForm = () => {
         <Row className={`justify-content-center ${styles.AuthForms}`}>
             <Col className='col-12 col-md-7'>
             <Form>
-            <Form.Group>
+            <Form.Group controlId='new_password1'>
                 <Form.Label>New password</Form.Label>
                 <Form.Control
                     placeholder="New password"
@@ -72,7 +72,7 @@ const UserpasswordForm = () => {
                 </Alert>
             ))}
 
-            <Form.Group>
+            <Form.Group controlId='new_password2'>
                 <Form.Label>Confirm password</Form.Label>
                 <Form.Control
                     placeholder="Confirm new password"
