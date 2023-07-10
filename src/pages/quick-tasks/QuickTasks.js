@@ -40,7 +40,6 @@ const QuickTasks = () => {
         fetchQuickTasks();
     }, [pathname, currentUser]);
 
-
     return (
         <div>
             {hasLoaded ?(

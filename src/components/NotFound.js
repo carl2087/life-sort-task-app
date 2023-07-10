@@ -18,10 +18,10 @@ const NotFound = () => {
             <Col className='col-12 text-center'>
                 <p>Sorry the page you are looking for does not exist.</p>
                 <Link to='/dashboard'>
-            <Button size='lg' className={BtnStyles.ButtonStyle}>
-                Dashboard
-            </Button>
-        </Link>
+                    <Button size='lg' className={BtnStyles.ButtonStyle}>
+                        Dashboard
+                    </Button>
+                </Link>
             </Col>
         </Row>
     )

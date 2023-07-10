@@ -93,8 +93,6 @@ const CreateHolidayTask = () => {
         }
     };
 
-
-
     return (
         <Row className='align-items-center justify-content-center'>
             <Col className='col-12 col-md-8 col-lg-6'>
@@ -339,7 +337,6 @@ const CreateHolidayTask = () => {
                         </Button>
                     </Col>
                 </Row>
-
 
             </Form>
         </Col>
