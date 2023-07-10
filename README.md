@@ -65,6 +65,7 @@ This ReadMe is for the front end section of the application.
   * [Technologies used](#technologies-used)
     + [Main languages used](#main-languages-used)
     + [Frameworks, Libraries & Programs Used](#frameworks--libraries---programs-used)
+  * [Components](#components)
   * [Deployment](#deployment)
     + [Forking/ Cloning](#forking--cloning)
     + [Deployment for Gitpod](#deployment-for-gitpod)
@@ -447,6 +448,19 @@ Back-end and front-end are included
  * ESLint : For linting and JSX validation.
 
  [Back to top](#table-of-contents)
+
+## Components
+
+Components in React are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+There are several that have been implemented within this project
+
+1. axiosDefault.js : for ease of communication with the backend API.
+
+1. CurrentUserContext.js : confirm users logged-in status to determine what functionality is available to that user.
+
+1. useRedirect.js : redirects a user to another page if they are not authorised to be on the page they are trying to access.
+
+1. utils.js : supplies functionality to all of the components that utilise the Infinite Scroll.
 
 ## Deployment
 
