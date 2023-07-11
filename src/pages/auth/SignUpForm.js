@@ -58,7 +58,7 @@ const SignUpForm = () => {
                     <Form.Label className='d-none'>Username</Form.Label>
                     <Form.Control
                     type="text"
-                    placeholder="Enter Username"
+                    placeholder="Enter Username (Case-Sensitive)"
                     name='username'
                     value={username}
                     onChange={handleChange}
