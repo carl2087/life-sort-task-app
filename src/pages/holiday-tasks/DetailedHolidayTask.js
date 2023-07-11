@@ -39,6 +39,7 @@ const DetailedHolidayTask = (props) => {
         try {
             await axiosRequest.delete(`/holiday/${id}/`);
             handleClose();
+            history.push('/dashboard');
             window.location.reload();
         } catch (error) {
             // console.log(error)

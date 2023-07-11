@@ -36,6 +36,7 @@ const DetailedCustomTask = (props) => {
         try {
             await axiosRequest.delete(`/customtask/${id}/`);
             handleClose();
+            history.push('/dashboard');
             window.location.reload();
         } catch (error) {
             // console.log(error)
