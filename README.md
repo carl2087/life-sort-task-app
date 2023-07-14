@@ -340,6 +340,12 @@ The task detail page/component is shown throughout the application and shows the
 
 ![task detail](src/assets/readme/features/holiday-task-page.png)
 
+### Search Bar
+
+There is a search bar for each task list allowing the user to search through each task individually if no search term is found they are shown the no items found graphic.
+
+![search bar](src/assets/readme/features/search-bar.png)
+
 ### Profile page
 
 The profile page has links to change password and username shows the current profile image which can be updated and bio description as well.
