@@ -13,8 +13,10 @@ import { fetchMoreData } from '../../utils/utils';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import { useRedirect } from '../../hooks/useRedirect';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import Form from 'react-bootstrap/Form';
 
-const Customtasks = () => {
+
+const Customtasks = ({ filter = '' }) => {
 
     useRedirect('loggedOut');
 
@@ -22,11 +24,12 @@ const Customtasks = () => {
     const [customTasks, setCustomTasks] = useState({results: [] });
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
+    const [query, setQuery] = useState("");
 
     useEffect(() => {
         const fetchCustomTasks = async () => {
             try {
-                const {data} = await axiosRequest.get('/customtask/')
+                const {data} = await axiosRequest.get(`/customtask/?${filter}search=${query}`)
                     data.results = data.results.filter((result) => {
                         return result.completed_state !== 'Completed'
                     });
@@ -37,11 +40,25 @@ const Customtasks = () => {
             }
         }
         setHasLoaded(false)
-        fetchCustomTasks()
-    }, [pathname, currentUser]);
+        const timer = setTimeout(() => {
+            fetchCustomTasks();
+            }, 1000)
+            return () => {
+                clearTimeout(timer)
+            }
+    }, [filter, query, pathname, currentUser]);
 
     return (
         <div>
+            <Form className={`${styles.SearchBar} col-md-6 border border-dark rounded`}  onSubmit={(event) => event.preventDefault()}>
+                <Form.Control
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                type="text"
+                className="col-md-6"
+                placeholder="Search Custom Tasks"
+            />
+            </Form>
             {hasLoaded ? (
                 <>
                 <Link to='/customtasks' className={`${styles.TaskPageLink}`}>
