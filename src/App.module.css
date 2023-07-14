@@ -33,6 +33,12 @@
     -ms-transition: color .5s linear; 
 }
 
+.SearchBar {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Scrollbar */
 
 *::-webkit-scrollbar-track

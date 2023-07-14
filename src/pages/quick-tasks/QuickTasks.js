@@ -12,9 +12,10 @@ import Container from 'react-bootstrap/Container';
 import NoResults from '../../assets/magnifying-glass.svg';
 import { useRedirect } from '../../hooks/useRedirect';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import Form from 'react-bootstrap/Form';
 
 
-const QuickTasks = () => {
+const QuickTasks = ({ filter = '' }) => {
 
     useRedirect('loggedOut');
 
@@ -22,11 +23,12 @@ const QuickTasks = () => {
     const [quickTasks, setQuickTasks] = useState({results: []});
     const [hasLoaded, setHasLoaded] = useState(false);
     const {pathname} = useLocation();
+    const [query, setQuery] = useState("");
 
     useEffect(() => {
         const fetchQuickTasks = async () => {
             try {
-                const {data} = await axiosRequest.get('/quicktask/')
+                const {data} = await axiosRequest.get(`/quicktask/?${filter}search=${query}`)
                 data.results = data.results.filter((result) => {
                     return result.completed_state !== 'Completed'
                 });
@@ -37,11 +39,25 @@ const QuickTasks = () => {
             }
         }
         setHasLoaded(false);
-        fetchQuickTasks();
-    }, [pathname, currentUser]);
+        const timer = setTimeout(() => {
+            fetchQuickTasks();
+            }, 1000)
+            return () => {
+                clearTimeout(timer)
+            }
+    }, [filter, query, pathname, currentUser]);
 
     return (
         <div>
+            <Form className={`${styles.SearchBar} col-md-6 border border-dark rounded`}  onSubmit={(event) => event.preventDefault()}>
+                <Form.Control
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                type="text"
+                className="col-md-6"
+                placeholder="Search Quick Tasks"
+            />
+            </Form>
             {hasLoaded ?(
                 <>
                 <Link to='/quicktasks' className={`${styles.TaskPageLink}`}>
