@@ -13,9 +13,10 @@ import DetailedHolidayTask from './DetailedHolidayTask';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import { useRedirect } from '../../hooks/useRedirect';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import Form from 'react-bootstrap/Form';
 
 
-const HolidayTasks = () => {
+const HolidayTasks = ({ filter = '' }) => {
 
     useRedirect('loggedOut');
 
@@ -23,11 +24,12 @@ const HolidayTasks = () => {
     const [holidayTasks, setHolidayTasks] = useState({results: []});
     const [hasLoaded, setHasLoaded] = useState(false);
     const { pathname } = useLocation();
+    const [query, setQuery] = useState("");
 
     useEffect(() => {
         const fetchHolidayTasks = async () => {
             try {
-                const {data} = await axiosRequest.get('/holiday/')
+                const {data} = await axiosRequest.get(`/holiday/?${filter}search=${query}`)
                 data.results = data.results.filter((result) => {
                     return result.completed_state !== 'Completed'
                 })
@@ -38,11 +40,25 @@ const HolidayTasks = () => {
             }
         }
         setHasLoaded(false)
-        fetchHolidayTasks()
-    }, [pathname, currentUser]);
+        const timer = setTimeout(() => {
+            fetchHolidayTasks();
+            }, 1000)
+            return () => {
+                clearTimeout(timer)
+            }
+    }, [filter, query, pathname, currentUser]);
 
     return (
         <div>
+            <Form className={`${styles.SearchBar} col-md-6 border border-dark rounded`}  onSubmit={(event) => event.preventDefault()}>
+                <Form.Control
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                type="text"
+                className="col-md-6"
+                placeholder="Search Holiday Tasks"
+            />
+            </Form>
             {hasLoaded ? (
                 <>
                 <Link to='/holidaytasks' className={`${styles.TaskPageLink}`}>
