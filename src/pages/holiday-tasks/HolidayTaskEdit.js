@@ -367,7 +367,6 @@ const HolidayTaskEdit = () => {
                     >
                     <option value="In progress">In Progress</option>
                     <option value="Completed">Completed</option>
-                    <option value="Overdue">Overdue</option>
                     </Form.Select>
                 </Form.Group>
 
